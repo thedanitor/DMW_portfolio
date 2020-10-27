@@ -7,7 +7,7 @@ export default function App() {
     <Router>
       <Navbar>
         <Switch>
-          <Route />
+          <Route exact path="/" component={Home} />
         </Switch>
       </Navbar>
     </Router>
