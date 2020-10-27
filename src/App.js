@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 export default function App() {
   return (
     <Router>
-      <Navbar>
+      <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
@@ -20,7 +20,6 @@ export default function App() {
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
-      </Navbar>
     </Router>
   );
 }

@@ -11,10 +11,6 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import HomeIcon from "@material-ui/icons/Home";
 import CategoryIcon from "@material-ui/icons/Category";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
-import PersonAddIcon from "@material-ui/icons/PersonAdd";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import InfoIcon from "@material-ui/icons/Info";
 import CreateIcon from "@material-ui/icons/Create";
 
