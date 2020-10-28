@@ -21,7 +21,7 @@ export default function Projects() {
         <div>
             <Grid container spacing={3}>
             {portfolioList.map((proj, index) => (
-                <Grid item lg={3} key={index}>
+                <Grid item xl={3} key={index}>
                   {/* <Slide direction={slideDirection} in={slideIn}> */}
                     <Paper>
                     <Project

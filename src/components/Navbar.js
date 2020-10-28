@@ -14,7 +14,17 @@ import CategoryIcon from "@material-ui/icons/Category";
 import InfoIcon from "@material-ui/icons/Info";
 import CreateIcon from "@material-ui/icons/Create";
 
-//Need to change mobile Icons
+import clsx from 'clsx';
+// import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+// import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import MailIcon from '@material-ui/icons/Mail';
+
+//Need to change all Icons
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,6 +54,13 @@ const useStyles = makeStyles(theme => ({
       justify: "space-between",
     },
   },
+  //list drawer
+  list: {
+    width: 350,
+  },
+  fullList: {
+    width: 'auto',
+  },
 }));
 
 export default function Navbar() {
@@ -52,6 +69,43 @@ export default function Navbar() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  //drawer
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor="right", open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      // className={clsx(classes.list, {
+      //   [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      // })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {[ "danmweikart@gmail.com", "thedanitor", "linkedIn", "Seattle, WA"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon><MailIcon /></ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
+
+
+
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -112,7 +166,7 @@ export default function Navbar() {
     },
     {
       ariaLabel: "contact",
-      icon: <InfoIcon href="/contact" />,
+      icon: <InfoIcon onClick={toggleDrawer(true)} />,
       pLabel: "Contact",
       link: "/contact",
     },
@@ -137,9 +191,16 @@ export default function Navbar() {
             <Button color="inherit" href="/Skills">
               Skills
             </Button>
-            <Button color="inherit" href="/contact">
-              Contact
-            </Button>
+            <Button  color="inherit">
+      {['Contact'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </Button>
             
           </div>
           <div className={classes.sectionMobile}>
