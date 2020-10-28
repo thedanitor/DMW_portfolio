@@ -20,7 +20,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
-
+import GitHubIcon from '@material-ui/icons/GitHub';
 import Menu from "@material-ui/core/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
@@ -29,7 +29,7 @@ import CategoryIcon from "@material-ui/icons/Category";
 import InfoIcon from "@material-ui/icons/Info";
 import CreateIcon from "@material-ui/icons/Create";
 
-const drawerWidth = 350;
+const drawerWidth = 400;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -128,7 +128,10 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
-
+//   const handleDrawer = () => {
+//     (setOpen(true) ? setOpen(false) : setOpen(true));
+//     console.log(setOpen)
+//   };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -147,10 +150,10 @@ export default function PersistentDrawerLeft() {
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{ vertical: "top", horizontal: "center" }}
       id={menuId}
       keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      transformOrigin={{ vertical: "top", horizontal: "center" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
@@ -187,19 +190,20 @@ export default function PersistentDrawerLeft() {
       pLabel: "Skills",
       link: "/skills",
     },
-    {
-      ariaLabel: "contact",
-      icon: <InfoIcon onClick={handleDrawerOpen} />,
-      pLabel: "Contact",
+    // {
+    //   ariaLabel: "contact",
+    //   icon: <InfoIcon href="/contact" />,
+    //   pLabel: "Contact",
     //   link: "/contact",
-    },
+    //   onclick: {handleDrawerOpen}
+    // },
   ];
 
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
+        position="static"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
@@ -225,6 +229,7 @@ export default function PersistentDrawerLeft() {
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
+            // onClick={setOpen}
             edge="start"
             // className={clsx(classes.menuButton
             //     // , open
@@ -270,6 +275,11 @@ export default function PersistentDrawerLeft() {
             <p>{item.pLabel}</p>
           </MenuItem>
         ))}
+        <MenuItem >
+        <IconButton aria-label="contact" color="inherit" onClick={handleDrawerOpen}>
+              <Badge color="secondary">Contact</Badge>
+            </IconButton>
+        </MenuItem>
       </Menu>
       {renderMenu}
       <Drawer
@@ -287,44 +297,14 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <List>
-        {[ "danmweikart@gmail.com", "thedanitor", "linkedIn", "Seattle, WA"].map((text, index) => (
+        {[ "danmweikart@gmail.com", "https://github.com/thedanitor", "https://www.linkedin.com/in/dan-weikart/", "Seattle, WA"].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon><MailIcon /></ListItemIcon>
+            <ListItemIcon><MailIcon /><GitHubIcon/></ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
       </Drawer>
-      {/* <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
-      </main> */}
     </div>
   );
 }
