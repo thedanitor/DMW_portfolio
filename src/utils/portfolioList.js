@@ -4,8 +4,6 @@ import aqirImg from "../assets/images/aqir_home_screen_4-3.png";
 import aqirWide from "../assets/images/aqir_home_screen_wide.png";
 import burgerImg from "../assets/images/burger_4-3.png";
 import burgerWide from "../assets/images/burger_wide.png";
-// import dayPlannerImg from "../assets/images/dayPlanner_4-3.png";
-// import dayPlannerWide from "../assets/images/dayPlanner_wide.png";
 import employeeRosterImg from "../assets/images/employeeRoster_4-3.png";
 import employeeRosterWide from "../assets/images/employeeRoster_wide.png";
 import fearSettingImg from "../assets/images/fearSetting_4-3.png";

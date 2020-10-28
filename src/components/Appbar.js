@@ -32,6 +32,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import CreateIcon from "@material-ui/icons/Create";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
+import contactInfo from "../utils/contactInfo";
 
 const drawerWidth = 400;
 
@@ -187,45 +188,6 @@ export default function PersistentDrawerLeft() {
     },
   ];
 
-  //Array to store contact menu items, will be rendered by .map
-  const contactInfo = [
-    {
-      ariaLabel: "email",
-      icon: <MailIcon />,
-      target: "_blank",
-      pLabel: "danmweikart@gmail.com",
-      href: "mailto: danmweikart@gmail.com",
-    },
-    {
-      ariaLabel: "github",
-      icon: <GitHubIcon />,
-      target: "_blank",
-      pLabel: "https://github.com/thedanitor",
-      href: "https://github.com/thedanitor",
-    },
-    {
-      ariaLabel: "linkedIn",
-      icon: <LinkedInIcon />,
-      target: "_blank",
-      pLabel: "https://www.linkedin.com/in/dan-weikart/",
-      href: "https://www.linkedin.com/in/dan-weikart/",
-    },
-    {
-      ariaLabel: "resume",
-      icon: <PictureAsPdfIcon />,
-      target: "_blank",
-      pLabel: "Resume",
-      href: Resume,
-    },
-    {
-      ariaLabel: "location",
-      icon: <LocationOnIcon />,
-      target: "_blank",
-      pLabel: "Seattle, WA",
-      href: "",
-    },
-  ];
-
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -321,12 +283,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <List>
           {contactInfo.map(infoItem => (
-            <ListItem button 
-            //  href={infoItem.href}
-            // target={infoItem.target}
-            //  button key={infoItem.pLabel}
-            
-             >
+            <ListItem button>
               <IconButton
                 aria-label={infoItem.ariaLabel}
                 color="inherit"
@@ -334,9 +291,9 @@ export default function PersistentDrawerLeft() {
                 target={infoItem.target}
               >
                 {infoItem.icon}
+                 
                 {infoItem.pLabel}
               </IconButton>
-              {/* {infoItem.pLabel} */}
             </ListItem>
           ))}
         </List>
