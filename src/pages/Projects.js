@@ -8,7 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 // import API from "../../utils/API";
 // import CategorySelector from "../../components/CategorySelector";
-// import Slide from "@material-ui/core/Slide";
+import Slide from "@material-ui/core/Slide";
 // import SearchBar from "../../components/SearchBar";
 // import ArrowButtons from "../../components/ArrowButtons";
 // import { makeStyles } from "@material-ui/core/styles";
@@ -22,7 +22,7 @@ export default function Projects() {
             <Grid container spacing={3}>
             {portfolioList.map((proj, index) => (
                 <Grid item xl={3} key={index}>
-                  {/* <Slide direction={slideDirection} in={slideIn}> */}
+                  <Slide direction="up" in="true">
                     <Paper>
                     <Project
                       name={proj.name}
@@ -35,7 +35,7 @@ export default function Projects() {
                       key={index}
                     />
                     </Paper>
-                  {/* </Slide> */}
+                  </Slide>
                 </Grid>
               ))}
 

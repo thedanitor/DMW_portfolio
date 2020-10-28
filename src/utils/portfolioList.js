@@ -76,7 +76,7 @@ const fearSetterProject = new ProjectData(
   fearSettingImg,
   fearSettingWide,
   "HTML / CSS / JavaScript / jQuery / UIkit",
-  "AQIR is an exclusive retail website that allows users to buy and sell products from the comfort of their home. Just sign up, login, and add or sell products with a community of users from around the world.",
+  "This app was created to help the user to conquer their fears. User can keep track of fears and is incentivised to overcome them.",
   "https://thedanitor.github.io/Project-1_Fear-Setter/",
   "https://github.com/thedanitor/Project-1_Fear-Setter"
 );
