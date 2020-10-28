@@ -7,12 +7,14 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Appbar from "./components/Appbar";
 
 
 export default function App() {
   return (
     <Router>
-      <Navbar />
+      <Appbar />
+      {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />

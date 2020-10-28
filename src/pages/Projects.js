@@ -12,17 +12,25 @@ import Slide from "@material-ui/core/Slide";
 // import SearchBar from "../../components/SearchBar";
 // import ArrowButtons from "../../components/ArrowButtons";
 // import { makeStyles } from "@material-ui/core/styles";
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 // import Button from "@material-ui/core/Button";
 
 export default function Projects() {
     return (
         <Container>
-        <div>
-            <Grid container spacing={3}>
+        {/* <div> */}
+        <Typography
+            gutterBottom
+            variant="h2"
+            component="h2"
+            className="project-title"
+          >
+            My Projects
+          </Typography>
+            <Grid container alignContent="space-around" spacing={3}>
             {portfolioList.map((proj, index) => (
-                <Grid item xl={3} key={index}>
-                  <Slide direction="up" in="true">
+                <Grid item xl={4} key={index}>
+                  <Slide direction="up" in="true" style={{ transitionDelay: '500ms'}}>
                     <Paper>
                     <Project
                       name={proj.name}
@@ -41,7 +49,7 @@ export default function Projects() {
 
             </Grid>
 
-        </div>
+        {/* </div> */}
       </Container>
     )
 }

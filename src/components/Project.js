@@ -14,51 +14,49 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Zoom from "@material-ui/core/Zoom";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Zoom ref={ref} {...props} />;
-  });
-  
-  const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-      maxHeight: 375,
-    },
-    
-    media: {
-      height: 140,
-    },
-  
-    description: {
-      height: 75,
-      textOverflow: "ellipsis",
-      overflow: "hidden",
-      whiteSpace: "no-wrap",
-    },
-  
-    title: {
-      height: 60,
-      textOverflow: "ellipsis",
-      overflow: "hidden",
-      whiteSpace: "no-wrap",
-    },
-  
-    modal: {
-      minWidth: 600,
-    },
-  });
+  return <Zoom ref={ref} {...props} />;
+});
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 500,
+    maxHeight: 500,
+  },
+
+  // media: {
+  //   height: 140,
+  // },
+
+  description: {
+    height: 75,
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    whiteSpace: "no-wrap",
+  },
+
+  title: {
+    height: 60,
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    whiteSpace: "no-wrap",
+  },
+
+  modal: {
+    minWidth: 600,
+  },
+});
 
 export default function Project({
-    name,
-    image,
-    imageLarge,
-    tech,
-    description,
-    webUrl,
-    githubUrl,
-    key
-
+  name,
+  image,
+  imageLarge,
+  tech,
+  description,
+  webUrl,
+  githubUrl,
+  key,
 }) {
-
-    const classes = useStyles();
+  const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
 
@@ -69,54 +67,64 @@ export default function Project({
   const handleClose = () => {
     setOpen(false);
   };
-    return (
-        <div>
-        <Card className={classes.root}>
-          <CardActionArea onClick={handleClickOpen}>
-            <CardMedia className={classes.media} image={image} component="img" title={name} />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
-                {name}
-              </Typography>
-              <Typography
+  return (
+    <div>
+      <Card className={classes.root}>
+        <CardActionArea onClick={handleClickOpen}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.title}
+          >
+            {name}
+          </Typography>
+          <CardMedia
+            className={classes.media}
+            image={image}
+            component="img"
+            title={name}
+          />
+          <CardContent>
+            {/* <Typography
                 variant="body2"
                 color="textSecondary"
                 component="p"
                 className={classes.description}
               >
                 {description}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
+              </Typography> */}
+          </CardContent>
+        </CardActionArea>
+        {/* <CardActions>
             <Button size="small" color="primary" onClick={handleClickOpen}>
               View Details
             </Button>
-          </CardActions>
-        </Card>
-  
-        <div>
-          <Dialog
-            open={open}
-            TransitionComponent={Transition}
-            keepMounted
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-slide-title"
-            aria-describedby="alert-dialog-slide-description"
-          >
-            <DialogTitle id={name}>{name}</DialogTitle>
-            <DialogContent>
-              <ProjectModal
-                    name={name}
-                    imageLarge={imageLarge}
-                    tech={tech}
-                    description={description}
-                    webUrl={webUrl}
-                    githubUrl={githubUrl}
-              />
-            </DialogContent>
-          </Dialog>
-        </div>
+          </CardActions> */}
+      </Card>
+
+      <div>
+        <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-slide-title"
+          aria-describedby="alert-dialog-slide-description"
+        >
+          <DialogTitle id={name}>{name}</DialogTitle>
+          <DialogContent>
+            <ProjectModal
+              name={name}
+              imageLarge={imageLarge}
+              tech={tech}
+              description={description}
+              webUrl={webUrl}
+              githubUrl={githubUrl}
+            />
+          </DialogContent>
+        </Dialog>
       </div>
-    )
+    </div>
+  );
 }
