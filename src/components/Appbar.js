@@ -1,38 +1,26 @@
 import React from "react";
+import contactInfo from "../utils/contactInfo";
+import menuItems from "../utils/menuItems";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Resume from "../assets/images/Dan_Weikart_Resume.pdf";
 import Drawer from "@material-ui/core/Drawer";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+// import Typography from "@material-ui/core/Typography";
+// import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import MailIcon from "@material-ui/icons/Mail";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import Menu from "@material-ui/core/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
-import HomeIcon from "@material-ui/icons/Home";
-import CategoryIcon from "@material-ui/icons/Category";
-import InfoIcon from "@material-ui/icons/Info";
-import CreateIcon from "@material-ui/icons/Create";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
-import contactInfo from "../utils/contactInfo";
+
 
 const drawerWidth = 400;
 
@@ -159,34 +147,6 @@ export default function PersistentDrawerLeft() {
   );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
-
-  //   Array to store mobile menu items, will be rendered by .map
-  const menuItems = [
-    {
-      ariaLabel: "home",
-      icon: <HomeIcon />,
-      pLabel: "Home",
-      link: "/",
-    },
-    {
-      ariaLabel: "about",
-      icon: <CategoryIcon href="/about" />,
-      pLabel: "About",
-      link: "/about",
-    },
-    {
-      ariaLabel: "projects",
-      icon: <CreateIcon href="/projects" />,
-      pLabel: "Projects",
-      link: "/projects",
-    },
-    {
-      ariaLabel: "skills",
-      icon: <InfoIcon href="/skills" />,
-      pLabel: "Skills",
-      link: "/skills",
-    },
-  ];
 
   return (
     <div className={classes.root}>
