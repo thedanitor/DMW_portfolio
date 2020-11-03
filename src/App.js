@@ -8,6 +8,7 @@ import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Appbar from "./components/Appbar";
+import Footer from "./components/Footer";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path="/skills" component={Skills} />
           {/* <Route exact path="/contact" component={Contact} /> */}
         </Switch>
+        <Footer />
     </Router>
   );
 }
