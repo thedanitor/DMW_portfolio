@@ -7,17 +7,18 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import { makeStyles } from "@material-ui/core/styles";
+import resume from "../assets/images/Dan_Weikart_Resume.pdf";
 import Link from "@material-ui/core/Link";
 
-// const useStyles = makeStyles(theme => ({
-//   iconLink: {
-//     margin: "5rem",
-//     color: "#F7F7F7",
-//   },
-// }));
+const useStyles = makeStyles(theme => ({
+  iconLink: {
+    margin: "5rem",
+    color: "#F7F7F7",
+  },
+}));
 
 export default function Footer() {
-    // const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <div>
@@ -29,40 +30,40 @@ export default function Footer() {
       </Grid>
       <Grid container spacing={2}>
         <Grid item xs={6} sm={3}>
-            <Link
-              href="https://github.com/cbragg9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon className="iconLink" icon={faEnvelopeOpenText} />
-            </Link>
+          <Link
+            href="mailto: danmweikart@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="iconLink" icon={faEnvelopeOpenText} />
+          </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
-            <Link
-              href="https://github.com/jaredhennessy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon className="iconLink" icon={faGithub} />
-            </Link>
+          <Link
+            href="https://github.com/thedanitor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="iconLink" icon={faGithub} />
+          </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
-            <Link
-              href="https://github.com/cristianmontenegrop"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon className="iconLink" icon={faLinkedin} />
-            </Link>
+          <Link
+            href="https://www.linkedin.com/in/dan-weikart/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="iconLink" icon={faLinkedin} />
+          </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
-            <Link
-              href="https://github.com/thedanitor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faFilePdf} />
-            </Link>
+          <Link
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFilePdf} />
+          </Link>
         </Grid>
       </Grid>
     </div>
