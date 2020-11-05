@@ -13,7 +13,7 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles(theme => ({
   iconLink: {
     margin: "5rem",
-    color: "#F7F7F7",
+    color: "#FF0000",
   },
 }));
 
@@ -35,7 +35,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className="iconLink" icon={faEnvelopeOpenText} />
+            <FontAwesomeIcon className={classes.iconLink} icon={faEnvelopeOpenText} size="3x"/>
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -44,7 +44,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className="iconLink" icon={faGithub} />
+            <FontAwesomeIcon className={classes.iconLink} icon={faGithub} size="3x"/>
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -53,7 +53,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className="iconLink" icon={faLinkedin} />
+            <FontAwesomeIcon className={classes.iconLink} icon={faLinkedin} size="3x"/>
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -62,7 +62,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFilePdf} />
+            <FontAwesomeIcon className={classes.iconLink} icon={faFilePdf} size="3x"/>
           </Link>
         </Grid>
       </Grid>
