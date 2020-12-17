@@ -40,12 +40,12 @@ export default function About() {
             full-stack web development. I have learned so much since I started
             the course and I am improving and learning more daily.
           </Typography>
-          <Typography variant="p">
+          {/* <Typography variant="p">
             My hobbies include hiking, camping, biking, reading, cooking,
             listening to and playing music. Causes I am dedicated to are social
             justice, sustainability, and climate change. It would be my dream to
             incorporate any of these passions into my work.
-          </Typography>
+          </Typography> */}
         </Grid>
       </Container>
     // </div>

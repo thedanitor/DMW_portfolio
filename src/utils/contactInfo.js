@@ -1,9 +1,7 @@
 import Resume from "../assets/images/Dan_Weikart_Resume.pdf";
-import MailIcon from "@material-ui/icons/Mail";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 function ContactInfo(ariaLabel, icon, target, pLabel, href) {
   this.ariaLabel = ariaLabel;
@@ -15,7 +13,7 @@ function ContactInfo(ariaLabel, icon, target, pLabel, href) {
 
 const email = new ContactInfo(
   "email",
-  <MailIcon/>,
+  faEnvelopeOpenText,
   "_blank",
   "danmweikart@gmail.com",
   "mailto: danmweikart@gmail.com"
@@ -23,7 +21,7 @@ const email = new ContactInfo(
 
 const github = new ContactInfo(
   "github",
-  <GitHubIcon/>,
+  faGithub,
   "_blank",
   "https://github.com/thedanitor",
   "https://github.com/thedanitor"
@@ -31,7 +29,7 @@ const github = new ContactInfo(
 
 const linkedIn = new ContactInfo(
   "linkedIn",
-  <LinkedInIcon/>,
+  faLinkedin,
   "_blank",
   "https://www.linkedin.com/in/dan-weikart/",
   "https://www.linkedin.com/in/dan-weikart/"
@@ -39,7 +37,7 @@ const linkedIn = new ContactInfo(
 
 const resume = new ContactInfo(
   "resume",
-  <PictureAsPdfIcon/>,
+  faFilePdf,
   "_blank",
   "Resume",
   Resume
@@ -47,7 +45,7 @@ const resume = new ContactInfo(
 
 const location = new ContactInfo(
   "location",
-  <LocationOnIcon/>,
+  faMap,
   "_blank",
   "Seattle, WA",
   ""

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
@@ -13,15 +14,40 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles(theme => ({
   iconLink: {
     margin: "5rem",
-    color: "#FF0000",
+    // color: "#FF0000",
   },
 }));
 
+
+
 export default function Footer() {
+  // const [hover, setHover] = useState(false);
   const classes = useStyles();
 
+  // const hoverOn = () => {
+  //   setHover(true);
+  // };
+
+  // const hoverOff = () => {
+  //   setHover(false);
+  // };
+
+  // let hoverStyle;
+  // hover
+  //   ? (hoverStyle = {
+  //       color: "#00FF00",
+  //       backgroundColor: "white",
+  //       boxShadow: "0 0 20px #00FF00",
+  //       texShadow: "0 0 5px #00FF00",
+  //       transition: "0.5s",
+  //       transform: "scale(1.5)",
+  //     })
+  //   : (hoverStyle = { color: "FF0000" });
+
   return (
-    <div>
+    <div 
+    // style={{ backgroundColor: "black" }}
+    >
       <Divider style={{ margin: "24px auto", width: "80%" }} />
       <Grid container justify={"center"} spacing={2}>
         <Grid item xs={12}>
@@ -35,7 +61,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className={classes.iconLink} icon={faEnvelopeOpenText} size="3x"/>
+            <FontAwesomeIcon
+              // onMouseEnter={hoverOn}
+              // onMouseOut={hoverOff}
+              // style={hoverStyle}
+              className={classes.iconLink}
+              icon={faEnvelopeOpenText}
+              size="3x"
+            />
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -44,7 +77,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className={classes.iconLink} icon={faGithub} size="3x"/>
+            <FontAwesomeIcon
+            // onMouseEnter={hoverOn}
+            // onMouseOut={hoverOff}
+            // style={hoverStyle}
+              className={classes.iconLink}
+              icon={faGithub}
+              size="3x"
+            />
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -53,16 +93,26 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon className={classes.iconLink} icon={faLinkedin} size="3x"/>
+            <FontAwesomeIcon
+            // onMouseEnter={hoverOn}
+            // onMouseOut={hoverOff}
+            // style={hoverStyle}
+              className={classes.iconLink}
+              icon={faLinkedin}
+              size="3x"
+            />
           </Link>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <Link
-            href={resume}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon className={classes.iconLink} icon={faFilePdf} size="3x"/>
+          <Link href={resume} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon
+            // onMouseEnter={hoverOn}
+            // onMouseOut={hoverOff}
+            // style={hoverStyle}
+              className={classes.iconLink}
+              icon={faFilePdf}
+              size="3x"
+            />
           </Link>
         </Grid>
       </Grid>

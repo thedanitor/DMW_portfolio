@@ -20,7 +20,12 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 const drawerWidth = 400;
 
@@ -241,22 +246,57 @@ export default function PersistentDrawerLeft() {
             )}
           </IconButton>
         </div>
+
+
+
         <List>
           {contactInfo.map(infoItem => (
-            <ListItem button>
-              <IconButton
-                aria-label={infoItem.ariaLabel}
-                color="inherit"
-                href={infoItem.href}
-                target={infoItem.target}
-              >
-                {infoItem.icon}
-                 
-                {infoItem.pLabel}
-              </IconButton>
+            <ListItem>
+              {/* <ListItemIcon> */}
+                <Link
+                  href={infoItem.href}
+                  target={infoItem.target}
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={infoItem.icon}
+                    // icon={faEnvelopeOpenText}
+                    // aria-label={infoItem.ariaLabel}
+                    size="3x"
+                    // color="FF00FF"
+                    // href={infoItem.href}
+                    // target={infoItem.target}
+                  />
+                </Link>
+
+                {infoItem.ariaLabel}
+              {/* </ListItemIcon> */}
             </ListItem>
           ))}
         </List>
+
+
+
+        {/* <List>
+          <ListItem>
+          <Link
+            href="mailto: danmweikart@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              // onMouseEnter={hoverOn}
+              // onMouseOut={hoverOff}
+              // style={hoverStyle}
+              // className={classes.iconLink}
+              icon={faEnvelopeOpenText}
+              size="3x"
+            />
+          </Link>
+          EMAIL
+          </ListItem>
+        </List> */}
+
       </Drawer>
     </div>
   );
