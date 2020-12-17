@@ -9,10 +9,28 @@ import Contact from "./pages/Contact";
 // import Navbar from "./components/Navbar";
 import Appbar from "./components/Appbar";
 import Footer from "./components/Footer";
+import { makeStyles } from "@material-ui/core/styles";
+import Background from "./assets/images/LakeMargaret.jpg"
+
+const useStyles = makeStyles({
+  backgroundHome: {
+      backgroundImage: `url(${Background})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      // backgroundRepeat: "no-repeat",
+      marginTop: 0,
+      marginBottom: 0,
+      // marginRight: "auto",
+      // marginLeft: "auto",
+      minHeight: 900,
+  }
+});
 
 
 export default function App() {
+  const classes = useStyles();
   return (
+    <div className={classes.backgroundHome}>
     <Router>
       <Appbar />
       {/* <Navbar /> */}
@@ -25,5 +43,6 @@ export default function App() {
         </Switch>
         <Footer />
     </Router>
+    </div>
   );
 }
