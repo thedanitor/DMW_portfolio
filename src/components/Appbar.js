@@ -23,9 +23,9 @@ import Button from "@material-ui/core/Button";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+// import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
+// import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 const drawerWidth = 400;
 
@@ -105,6 +105,10 @@ const useStyles = makeStyles(theme => ({
       display: "none",
       justify: "space-between",
     },
+  },
+  iconLink: {
+    margin: "2rem",
+    color: "#FF0000",
   },
 }));
 
@@ -253,7 +257,9 @@ export default function PersistentDrawerLeft() {
           {contactInfo.map(infoItem => (
             <ListItem>
               {/* <ListItemIcon> */}
-                <Link
+                <a
+                // to={infoItem.href}
+                // component="a"
                   href={infoItem.href}
                   target={infoItem.target}
                   rel="noopener noreferrer"
@@ -261,15 +267,16 @@ export default function PersistentDrawerLeft() {
                   <FontAwesomeIcon
                     icon={infoItem.icon}
                     // icon={faEnvelopeOpenText}
-                    // aria-label={infoItem.ariaLabel}
+                    aria-label={infoItem.ariaLabel}
                     size="3x"
+                    className={classes.iconLink}
                     // color="FF00FF"
                     // href={infoItem.href}
                     // target={infoItem.target}
                   />
-                </Link>
+                </a>
 
-                {infoItem.ariaLabel}
+                {infoItem.pLabel}
               {/* </ListItemIcon> */}
             </ListItem>
           ))}

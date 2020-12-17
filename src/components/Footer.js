@@ -14,7 +14,7 @@ import Link from "@material-ui/core/Link";
 const useStyles = makeStyles(theme => ({
   iconLink: {
     margin: "5rem",
-    // color: "#FF0000",
+    color: "#FF0000",
   },
 }));
 

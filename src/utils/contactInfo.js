@@ -23,7 +23,7 @@ const github = new ContactInfo(
   "github",
   faGithub,
   "_blank",
-  "https://github.com/thedanitor",
+  "thedanitor",
   "https://github.com/thedanitor"
 );
 
@@ -31,7 +31,7 @@ const linkedIn = new ContactInfo(
   "linkedIn",
   faLinkedin,
   "_blank",
-  "https://www.linkedin.com/in/dan-weikart/",
+  "dan-weikart",
   "https://www.linkedin.com/in/dan-weikart/"
 );
 
@@ -48,7 +48,7 @@ const location = new ContactInfo(
   faMap,
   "_blank",
   "Seattle, WA",
-  ""
+  "https://www.google.com/maps/place/Seattle,+WA/@47.6129432,-122.4821475,11z/data=!3m1!4b1!4m5!3m4!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6062095!4d-122.3320708"
 );
 
 let contactInfo = [email, github, linkedIn, resume, location];
