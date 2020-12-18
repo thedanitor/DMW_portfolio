@@ -12,10 +12,29 @@ import resume from "../assets/images/Dan_Weikart_Resume.pdf";
 import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
-  iconLink: {
-    margin: "5rem",
-    color: "#FF0000",
+  // iconLink: {
+  //   margin: "5rem",
+  //   // color: "#FF0000",
+  // },
+  emailLink: {
+    color: "#3e5de8",
+    margin: "2rem",
   },
+  githubLink: {
+    color: "white",
+    margin: "2rem",
+  },
+  linkedinLink: {
+    color: "#0077b5",
+    margin: "2rem",
+  },
+  resumeLink: {
+    color: "#e81b0a",
+    margin: "2rem",
+  },
+  container: {
+    backgroundColor: "rgba(119, 119, 119, 0.5)",
+  }
 }));
 
 
@@ -47,15 +66,18 @@ export default function Footer() {
   return (
     <div 
     // style={{ backgroundColor: "black" }}
+    className={classes.container}
     >
       <Divider style={{ margin: "24px auto", width: "80%" }} />
       <Grid container justify={"center"} spacing={2}>
+        
         <Grid item xs={12}>
           <Typography align={"center"}>© Copyright 2020 Dan Weikart</Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={2}>
-        <Grid item xs={6} sm={3}>
+      {/* <Grid item xs={1} sm={1} md={1} lg={3}></Grid> */}
+      <Grid container alignContent="center" spacing={2}>
+        <Grid item xs={12} sm={12} md={10} lg={6}>
           <Link
             href="mailto: danmweikart@gmail.com"
             target="_blank"
@@ -65,13 +87,13 @@ export default function Footer() {
               // onMouseEnter={hoverOn}
               // onMouseOut={hoverOff}
               // style={hoverStyle}
-              className={classes.iconLink}
+              className={classes.emailLink}
               icon={faEnvelopeOpenText}
               size="3x"
             />
           </Link>
-        </Grid>
-        <Grid item xs={6} sm={3}>
+        {/* </Grid>
+        <Grid item xs={6} sm={3}> */}
           <Link
             href="https://github.com/thedanitor"
             target="_blank"
@@ -81,13 +103,13 @@ export default function Footer() {
             // onMouseEnter={hoverOn}
             // onMouseOut={hoverOff}
             // style={hoverStyle}
-              className={classes.iconLink}
+              className={classes.githubLink}
               icon={faGithub}
               size="3x"
             />
           </Link>
-        </Grid>
-        <Grid item xs={6} sm={3}>
+        {/* </Grid>
+        <Grid item xs={6} sm={3}> */}
           <Link
             href="https://www.linkedin.com/in/dan-weikart/"
             target="_blank"
@@ -97,24 +119,25 @@ export default function Footer() {
             // onMouseEnter={hoverOn}
             // onMouseOut={hoverOff}
             // style={hoverStyle}
-              className={classes.iconLink}
+              className={classes.linkedinLink}
               icon={faLinkedin}
               size="3x"
             />
           </Link>
-        </Grid>
-        <Grid item xs={6} sm={3}>
+        {/* </Grid>
+        <Grid item xs={6} sm={3}> */}
           <Link href={resume} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon
             // onMouseEnter={hoverOn}
             // onMouseOut={hoverOff}
             // style={hoverStyle}
-              className={classes.iconLink}
+              className={classes.resumeLink}
               icon={faFilePdf}
               size="3x"
             />
           </Link>
         </Grid>
+        {/* <Grid item xs={1} sm={1} md={1} lg={3}></Grid> */}
       </Grid>
     </div>
   );
