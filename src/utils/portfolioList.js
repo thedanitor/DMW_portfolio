@@ -55,7 +55,7 @@ const burgerProject = new ProjectData(
   burgerWide,
   "HTML / CSS / JavaScript / MySQL / Node / Express",
   "This website allows the user to enter a burger and virtually eat it.",
-  "https://desolate-lake-88322.herokuapp.com/",
+  "https://dansburgers.herokuapp.com/",
   "https://github.com/thedanitor/burger"
 );
 

@@ -45,6 +45,7 @@ const useStyles = makeStyles({
 
   modal: {
     minWidth: 600,
+    backgroundColor: "rgba(0, 0, 0, 0)",
   },
 });
 
@@ -151,10 +152,14 @@ export default function Project({
           onClose={handleClose}
           aria-labelledby="alert-dialog-slide-title"
           aria-describedby="alert-dialog-slide-description"
+          
         >
           <DialogTitle id={name}>{name}</DialogTitle>
-          <DialogContent>
+          <DialogContent
+          //  className={classes.modal}
+          >
             <ProjectModal
+            
               name={name}
               imageLarge={imageLarge}
               tech={tech}
