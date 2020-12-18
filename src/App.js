@@ -11,6 +11,8 @@ import Appbar from "./components/Appbar";
 import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import Background from "./assets/images/LakeMargaret.jpg"
+import createMuiTheme from "./theme";
+import { ThemeProvider } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   backgroundHome: {
@@ -32,6 +34,7 @@ export default function App() {
   return (
     <div className={classes.backgroundHome}>
     <Router>
+      <ThemeProvider theme={createMuiTheme}>
       <Appbar />
       {/* <Navbar /> */}
         <Switch>
@@ -42,6 +45,7 @@ export default function App() {
           <Route exact path="/contact" component={Contact} />
         </Switch>
         <Footer />
+        </ThemeProvider>
     </Router>
     </div>
   );

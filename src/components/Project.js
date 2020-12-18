@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ProjectModal from "./ProjectModal";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -21,6 +21,8 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 500,
     maxHeight: 500,
+    border: "3px solid black",
+    backgroundColor: "rgba(0, 0, 0, 0)",
   },
 
   // media: {
@@ -67,9 +69,44 @@ export default function Project({
   const handleClose = () => {
     setOpen(false);
   };
+
+
+  const [hover, setHover] = useState(false);
+
+  const hoverOn = () => {
+    setHover(true);
+  };
+
+  const hoverOff = () => {
+    setHover(false);
+  };
+
+  let hoverStyle;
+  hover
+    ? (hoverStyle = {
+      opacity: 0.75,
+        // color: "#00FF00",
+        // backgroundColor: "black",
+        // boxShadow: "0 0 20px #00FF00",
+        // texShadow: "0 0 5px #00FF00",
+        // transition: "0.5s",
+        // transform: "scale(0.75)",
+      })
+    : (hoverStyle = { 
+      opacity: 1,
+      // color: "FF0000" 
+    });
+
+
+
+
   return (
     <div>
-      <Card className={classes.root}>
+      <Card className={classes.root}
+      // onMouseEnter={hoverOn}
+      // onMouseOut={hoverOff}
+      // style={hoverStyle}
+      >
         <CardActionArea onClick={handleClickOpen}>
           {/* <Typography
             gutterBottom
@@ -84,17 +121,20 @@ export default function Project({
             image={image}
             component="img"
             title={name}
+            onMouseEnter={hoverOn}
+            onMouseOut={hoverOff}
+            style={hoverStyle}
           />
-          <CardContent>
-            {/* <Typography
+          {/* <CardContent>
+            <Typography
                 variant="body2"
                 color="textSecondary"
                 component="p"
                 className={classes.description}
               >
                 {description}
-              </Typography> */}
-          </CardContent>
+              </Typography>
+          </CardContent> */}
         </CardActionArea>
         {/* <CardActions>
             <Button size="small" color="primary" onClick={handleClickOpen}>

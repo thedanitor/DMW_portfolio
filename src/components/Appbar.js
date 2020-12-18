@@ -37,9 +37,11 @@ const useStyles = makeStyles(theme => ({
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
+      // backgroundColor: "rgba(119, 119, 119, 0.5)",
     }),
   },
   appBarShift: {
+    // backgroundColor: "rgba(119, 119, 119, 0.5)",
     width: `calc(100% - ${drawerWidth}px)`,
     marginRight: drawerWidth,
     transition: theme.transitions.create(["margin", "width"], {
@@ -166,7 +168,9 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar alignItems="center">
+        <Toolbar alignItems="center"
+         
+        >
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Button color="inherit" href="/">
