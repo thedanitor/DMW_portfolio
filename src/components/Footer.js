@@ -76,8 +76,8 @@ export default function Footer() {
         </Grid>
       </Grid>
       {/* <Grid item xs={1} sm={1} md={1} lg={3}></Grid> */}
-      <Grid container alignContent="center" spacing={2}>
-        <Grid item xs={12} sm={12} md={10} lg={6}>
+      <Grid container justify={"center"} spacing={2}>
+        <Grid item align={"center"} xs={12} sm={12} md={10} lg={6}>
           <Link
             href="mailto: danmweikart@gmail.com"
             target="_blank"

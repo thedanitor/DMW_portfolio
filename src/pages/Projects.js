@@ -27,7 +27,7 @@ export default function Projects() {
           >
             My Projects
           </Typography>
-            <Grid container alignContent="center" spacing={3}>
+            <Grid container justify={"center"} spacing={3}>
             {portfolioList.map((proj, index) => (
                 <Grid item xl={4} key={index}>
                   <Slide direction="up" in="true" style={{ transitionDelay: '500ms'}}>

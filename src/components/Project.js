@@ -71,14 +71,14 @@ export default function Project({
     <div>
       <Card className={classes.root}>
         <CardActionArea onClick={handleClickOpen}>
-          <Typography
+          {/* <Typography
             gutterBottom
             variant="h5"
             component="h2"
             className={classes.title}
           >
             {name}
-          </Typography>
+          </Typography> */}
           <CardMedia
             className={classes.media}
             image={image}
