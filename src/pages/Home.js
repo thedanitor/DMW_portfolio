@@ -1,6 +1,6 @@
 import React from 'react'
-import { makeStyles } from "@material-ui/core/styles";
-import Background from "../assets/images/LakeMargaret.jpg"
+// import { makeStyles } from "@material-ui/core/styles";
+// import Background from "../assets/images/LakeMargaret.jpg"
 
 
 // const useStyles = makeStyles({

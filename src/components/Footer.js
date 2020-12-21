@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, {
+  //  useState 
+  } from "react";
 import contactInfo from "../utils/contactInfo";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -10,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { makeStyles } from "@material-ui/core/styles";
 // import resume from "../assets/images/Dan_Weikart_Resume.pdf";
 import Link from "@material-ui/core/Link";
+import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   iconLink: {
@@ -21,8 +24,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Footer() {
-  // const [hover, setHover] = useState(false);
   const classes = useStyles();
+
+  // const [hover, setHover] = useState(false);
 
   // const hoverOn = () => {
   //   setHover(true);
@@ -35,14 +39,18 @@ export default function Footer() {
   // let hoverStyle;
   // hover
   //   ? (hoverStyle = {
-  //       color: "#00FF00",
-  //       backgroundColor: "white",
-  //       boxShadow: "0 0 20px #00FF00",
-  //       texShadow: "0 0 5px #00FF00",
-  //       transition: "0.5s",
-  //       transform: "scale(1.5)",
+  //       // color: "#00FF00",
+  //       // backgroundColor: "white",
+  //       // boxShadow: "0 0 20px #00FF00",
+  //       // texShadow: "0 0 5px #00FF00",
+  //       // transition: "0.5s",
+  //       // transform: "scale(1.5)",
+  //       opacity: 0.5
   //     })
-  //   : (hoverStyle = { color: "FF0000" });
+  //   : (hoverStyle = {
+  //      opacity: 1 
+  //     }
+  //     );
 
   return (
     <div className={classes.container}>
@@ -54,12 +62,15 @@ export default function Footer() {
       </Grid>
       <Grid container justify={"center"} spacing={2}>
         <Grid item align={"center"} xs={12} sm={12} md={10} lg={6}>
-          {contactInfo.map(infoItem => (
+          {contactInfo.map((infoItem, index) => (
+            <Tooltip title={infoItem.pLabel} key={index}>
             <Link
+            
               href={infoItem.href}
               target={infoItem.target}
               rel="noopener noreferrer"
             >
+              
               <FontAwesomeIcon
                 className={classes.iconLink}
                 icon={infoItem.icon}
@@ -70,7 +81,9 @@ export default function Footer() {
                 // onMouseOut={hoverOff}
                 // style={hoverStyle}
               ></FontAwesomeIcon>
+              
             </Link>
+            </Tooltip>
           ))}
         </Grid>
       </Grid>

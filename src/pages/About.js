@@ -25,8 +25,10 @@ export default function About() {
     // className={classes.root}
     // >
       <Container className={classes.root}>
+        
         <Typography variant="h2">About Me</Typography>
         <Grid container>
+        <Paper>
           <Typography variant="p">
             Chemist turned web developer has the formula to synthesize
             analytical experience and problem-solving abilities with creative
@@ -35,18 +37,24 @@ export default function About() {
             constantly. I have turned my attention to web development because it
             not only requires these skills, but encourages creativity as well.
           </Typography>
+          <Paper>
+
+          </Paper>
           <Typography variant="p">
             Recent graduate of University of Washington's coding bootcamp for
             full-stack web development. I have learned so much since I started
             the course and I am improving and learning more daily.
           </Typography>
+          <Paper></Paper>
           {/* <Typography variant="p">
             My hobbies include hiking, camping, biking, reading, cooking,
             listening to and playing music. Causes I am dedicated to are social
             justice, sustainability, and climate change. It would be my dream to
             incorporate any of these passions into my work.
           </Typography> */}
+          </Paper>
         </Grid>
+        
       </Container>
     // </div>
   );

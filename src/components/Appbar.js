@@ -20,12 +20,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-// import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
-// import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 const drawerWidth = 300;
 
@@ -37,11 +32,9 @@ const useStyles = makeStyles(theme => ({
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
-      // backgroundColor: "rgba(119, 119, 119, 0.5)",
     }),
   },
   appBarShift: {
-    // backgroundColor: "rgba(119, 119, 119, 0.5)",
     width: `calc(100% - ${drawerWidth}px)`,
     marginRight: drawerWidth,
     transition: theme.transitions.create(["margin", "width"], {
@@ -168,7 +161,8 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar alignItems="center"
+        <Toolbar 
+        // alignItems="center"
          
         >
           <div className={classes.grow} />
@@ -217,8 +211,8 @@ export default function PersistentDrawerLeft() {
         open={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
       >
-        {menuItems.map(item => (
-          <MenuItem key={item.pLabel} component={Link} to={item.link}>
+        {menuItems.map((item, index) => (
+          <MenuItem key={index} component={Link} to={item.link}>
             <IconButton aria-label={item.ariaLabel} color="inherit">
               <Badge color="secondary">{item.icon}</Badge>
             </IconButton>
@@ -258,56 +252,29 @@ export default function PersistentDrawerLeft() {
 
 
         <List>
-          {contactInfo.map(infoItem => (
-            <ListItem>
-              {/* <ListItemIcon> */}
+          {contactInfo.map((infoItem, index) => (
+            <ListItem
+            key={index}
+            >
                 <a
-                // to={infoItem.href}
-                // component="a"
+                
                   href={infoItem.href}
                   target={infoItem.target}
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon
                     icon={infoItem.icon}
-                    // icon={faEnvelopeOpenText}
                     aria-label={infoItem.ariaLabel}
                     size="3x"
                     className={classes.iconLink}
                     color={infoItem.color}
-                    // href={infoItem.href}
-                    // target={infoItem.target}
                   />
                 </a>
 
                 {infoItem.pLabel}
-              {/* </ListItemIcon> */}
             </ListItem>
           ))}
         </List>
-
-
-
-        {/* <List>
-          <ListItem>
-          <Link
-            href="mailto: danmweikart@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              // onMouseEnter={hoverOn}
-              // onMouseOut={hoverOff}
-              // style={hoverStyle}
-              // className={classes.iconLink}
-              icon={faEnvelopeOpenText}
-              size="3x"
-            />
-          </Link>
-          EMAIL
-          </ListItem>
-        </List> */}
-
       </Drawer>
     </div>
   );

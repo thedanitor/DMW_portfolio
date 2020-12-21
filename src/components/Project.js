@@ -1,21 +1,23 @@
-import React, { useContext, useState } from "react";
+import React, { 
+  // useContext, 
+  useState } from "react";
 import ProjectModal from "./ProjectModal";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
+// import CardActions from "@material-ui/core/CardActions";
+// import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+// import Button from "@material-ui/core/Button";
+// import Typography from "@material-ui/core/Typography";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import Zoom from "@material-ui/core/Zoom";
+// import Zoom from "@material-ui/core/Zoom";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Zoom ref={ref} {...props} />;
-});
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//   return <Zoom ref={ref} {...props} />;
+// });
 
 const useStyles = makeStyles({
   root: {
@@ -147,7 +149,7 @@ export default function Project({
       <div>
         <Dialog
           open={open}
-          TransitionComponent={Transition}
+          // TransitionComponent={Transition}
           keepMounted
           onClose={handleClose}
           aria-labelledby="alert-dialog-slide-title"

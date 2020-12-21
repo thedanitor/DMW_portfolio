@@ -1,4 +1,10 @@
-const frontEndSkills = [
+function SkillsData(
+    skillName
+) {
+    this.skillName = skillName;
+}
+
+const frontEndSkills = new SkillsData([
     "HTML",
     "CSS",
     "JavaScript",
@@ -8,9 +14,9 @@ const frontEndSkills = [
     "UIKit",
     "Bulma",
     "Material-UI",
-];
+]);
 
-const backEndSkills = [
+const backEndSkills = new SkillsData([
     "Node",
     "Express",
     "MySQL",
@@ -19,9 +25,9 @@ const backEndSkills = [
     "Mongoose",
     "IndexedDB",
     "Handlebars",
-];
+]);
 
-const relatedSkills = [
+const relatedSkills = new SkillsData([
     "Github",
     "Heroku",
     "Gitlab",
@@ -29,12 +35,13 @@ const relatedSkills = [
     "VS Code",
     "Process Validation",
     "Testing",
-];
+]);
 
-const skills = [
+let skills = [
     frontEndSkills,
     backEndSkills,
     relatedSkills,
 ];
 
 export default skills;
+  
