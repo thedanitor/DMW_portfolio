@@ -27,7 +27,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faEnvelopeOpenText, faMap } from "@fortawesome/free-solid-svg-icons";
 // import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-const drawerWidth = 400;
+const drawerWidth = 300;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,6 +61,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: "rgba(119, 119, 119, 0.9)",
   },
   drawerHeader: {
     display: "flex",
@@ -110,7 +111,6 @@ const useStyles = makeStyles(theme => ({
   },
   iconLink: {
     margin: "2rem",
-    color: "#FF0000",
   },
 }));
 
@@ -274,7 +274,7 @@ export default function PersistentDrawerLeft() {
                     aria-label={infoItem.ariaLabel}
                     size="3x"
                     className={classes.iconLink}
-                    // color="FF00FF"
+                    color={infoItem.color}
                     // href={infoItem.href}
                     // target={infoItem.target}
                   />
