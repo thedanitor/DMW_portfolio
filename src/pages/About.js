@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
     //   height: theme.spacing(16),
     // },
   },
+  paper: {
+    backgroundColor: "rgba(119, 119, 119, 0.5)",
+  },
 }));
 
 export default function About() {
@@ -28,7 +31,7 @@ export default function About() {
         
         <Typography variant="h2">About Me</Typography>
         <Grid container>
-        <Paper>
+        <Paper className={classes.paper}>
           <Typography variant="p">
             Chemist turned web developer has the formula to synthesize
             analytical experience and problem-solving abilities with creative
@@ -37,15 +40,17 @@ export default function About() {
             constantly. I have turned my attention to web development because it
             not only requires these skills, but encourages creativity as well.
           </Typography>
-          <Paper>
+          {/* </Paper>
+          <Paper className={classes.paper}> */}
 
-          </Paper>
+          <br></br>
           <Typography variant="p">
             Recent graduate of University of Washington's coding bootcamp for
             full-stack web development. I have learned so much since I started
             the course and I am improving and learning more daily.
           </Typography>
-          <Paper></Paper>
+          </Paper>
+          <Paper className={classes.paper}>
           {/* <Typography variant="p">
             My hobbies include hiking, camping, biking, reading, cooking,
             listening to and playing music. Causes I am dedicated to are social

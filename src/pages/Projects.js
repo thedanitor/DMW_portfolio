@@ -9,7 +9,6 @@ import Grid from "@material-ui/core/Grid";
 // import API from "../../utils/API";
 // import CategorySelector from "../../components/CategorySelector";
 import Slide from "@material-ui/core/Slide";
-// import SearchBar from "../../components/SearchBar";
 // import ArrowButtons from "../../components/ArrowButtons";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -56,7 +55,6 @@ export default function Projects() {
 
     return (
         <Container>
-        {/* <div> */}
         <Typography
             gutterBottom
             variant="h2"
@@ -86,10 +84,7 @@ export default function Projects() {
                   </Slide>
                 </Grid>
               ))}
-
             </Grid>
-
-        {/* </div> */}
       </Container>
     )
 }

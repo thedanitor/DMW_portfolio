@@ -11,9 +11,17 @@ import backEndSkills from "../utils/backEndSkills";
 import relatedSkills from "../utils/relatedSkills";
 import Skill from "../components/Skill";
 import List from "@material-ui/core/List";
+import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
 
+const useStyles = makeStyles({
+  paper: {
+    backgroundColor: "rgba(119, 119, 119, 0.5)",
+  },
+});
+
 export default function Skills() {
+  const classes = useStyles();
   return (
     <Container>
       <Typography
@@ -27,7 +35,7 @@ export default function Skills() {
       <Grid container justify={"center"} spacing={5}>
         <Grid item sm={6} md={4}>
           <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
-            <Paper>
+            <Paper className={classes.paper}>
           {frontEndSkills.map(skill => (
             <List>
               <Skill skill={skill}></Skill>
@@ -38,7 +46,7 @@ export default function Skills() {
         </Grid>
         <Grid item sm={6} md={4}>
           <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
-            <Paper>
+            <Paper className={classes.paper}>
           {backEndSkills.map(skill => (
             <List>
               <Skill skill={skill}></Skill>
@@ -49,7 +57,7 @@ export default function Skills() {
         </Grid>
         <Grid item sm={6} md={4}>
           <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
-            <Paper>
+            <Paper className={classes.paper}>
           {relatedSkills.map(skill => (
             <List>
               <Skill skill={skill}></Skill>

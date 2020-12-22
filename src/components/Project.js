@@ -1,6 +1,7 @@
-import React, { 
-  // useContext, 
-  useState } from "react";
+import React, {
+  // useContext,
+  useState,
+} from "react";
 import ProjectModal from "./ProjectModal";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -13,17 +14,18 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-// import Zoom from "@material-ui/core/Zoom";
+import Zoom from "@material-ui/core/Zoom";
 
-// const Transition = React.forwardRef(function Transition(props, ref) {
-//   return <Zoom ref={ref} {...props} />;
-// });
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Zoom ref={ref} {...props} />;
+});
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 500,
     maxHeight: 500,
     border: "3px solid black",
+    margin: 0,
     backgroundColor: "rgba(0, 0, 0, 0)",
   },
 
@@ -46,8 +48,9 @@ const useStyles = makeStyles({
   },
 
   modal: {
-    minWidth: 600,
-    backgroundColor: "rgba(0, 0, 0, 0)",
+    // minWidth: 600,
+    // backgroundColor: "rgba(0, 0, 0, 0)",
+    border: "3px solid black",
   },
 });
 
@@ -59,7 +62,7 @@ export default function Project({
   description,
   webUrl,
   githubUrl,
-  key,
+  // key,
 }) {
   const classes = useStyles();
 
@@ -72,7 +75,6 @@ export default function Project({
   const handleClose = () => {
     setOpen(false);
   };
-
 
   const [hover, setHover] = useState(false);
 
@@ -87,7 +89,7 @@ export default function Project({
   let hoverStyle;
   hover
     ? (hoverStyle = {
-      opacity: 0.75,
+        opacity: 0.75,
         // color: "#00FF00",
         // backgroundColor: "black",
         // boxShadow: "0 0 20px #00FF00",
@@ -95,30 +97,20 @@ export default function Project({
         // transition: "0.5s",
         // transform: "scale(0.75)",
       })
-    : (hoverStyle = { 
-      opacity: 1,
-      // color: "FF0000" 
-    });
-
-
-
+    : (hoverStyle = {
+        opacity: 1,
+        // color: "FF0000"
+      });
 
   return (
     <div>
-      <Card className={classes.root}
-      // onMouseEnter={hoverOn}
-      // onMouseOut={hoverOff}
-      // style={hoverStyle}
+      <Card
+        className={classes.root}
+        // onMouseEnter={hoverOn}
+        // onMouseOut={hoverOff}
+        // style={hoverStyle}
       >
         <CardActionArea onClick={handleClickOpen}>
-          {/* <Typography
-            gutterBottom
-            variant="h5"
-            component="h2"
-            className={classes.title}
-          >
-            {name}
-          </Typography> */}
           <CardMedia
             className={classes.media}
             image={image}
@@ -128,40 +120,24 @@ export default function Project({
             onMouseOut={hoverOff}
             style={hoverStyle}
           />
-          {/* <CardContent>
-            <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-                className={classes.description}
-              >
-                {description}
-              </Typography>
-          </CardContent> */}
         </CardActionArea>
-        {/* <CardActions>
-            <Button size="small" color="primary" onClick={handleClickOpen}>
-              View Details
-            </Button>
-          </CardActions> */}
       </Card>
 
       <div>
         <Dialog
           open={open}
-          // TransitionComponent={Transition}
+          TransitionComponent={Transition}
           keepMounted
           onClose={handleClose}
-          aria-labelledby="alert-dialog-slide-title"
-          aria-describedby="alert-dialog-slide-description"
+          aria-labelledby={name}
+          aria-describedby={description}
+          PaperComponent="Paper"
+          className={classes.modal}
           
         >
           <DialogTitle id={name}>{name}</DialogTitle>
-          <DialogContent
-          //  className={classes.modal}
-          >
+          <DialogContent>
             <ProjectModal
-            
               name={name}
               imageLarge={imageLarge}
               tech={tech}
