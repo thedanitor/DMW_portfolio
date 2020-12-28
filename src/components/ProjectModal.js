@@ -25,7 +25,7 @@ export default function ProjectModal({
   description,
   webUrl,
   githubUrl,
-  //   handleClose,
+    handleClose,
   //   show,
 }) {
   const classes = useStyles();
@@ -65,6 +65,16 @@ export default function ProjectModal({
           className="btn"
         >
           Github Repository
+        </Button>
+        <Button
+          size="small"
+          color="secondary"
+          onClick={handleClose}
+          // target="_blank"
+          // rel="noopener noreferrer"
+          className="btn"
+        >
+          Close
         </Button>
       </CardActions>
     </Card>

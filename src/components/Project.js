@@ -144,6 +144,7 @@ export default function Project({
               description={description}
               webUrl={webUrl}
               githubUrl={githubUrl}
+              handleClose={handleClose}
             />
           </DialogContent>
         </Dialog>
