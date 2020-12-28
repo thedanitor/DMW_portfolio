@@ -24,9 +24,6 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    // <div
-    // className={classes.root}
-    // >
     <Container className={classes.root}>
       <Typography variant="h2">About Me</Typography>
       <Grid container>
@@ -62,6 +59,5 @@ export default function About() {
         </Paper>
       </Grid>
     </Container>
-    // </div>
   );
 }

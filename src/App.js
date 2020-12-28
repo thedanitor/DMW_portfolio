@@ -20,17 +20,17 @@ const useStyles = makeStyles({
   backgroundHome: {
       backgroundImage: `url(${Background})`,
       backgroundSize: "cover",
-      backgroundPosition: "center",
-      // backgroundRepeat: "repeat",
-      marginTop: 0,
-      marginBottom: 0,
+      backgroundPosition: "center center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      // backgroundColor: "#464646",
+      height: "100%",
+      // marginTop: 0,
+      // marginBottom: 0,
       // marginRight: 0,
       // marginLeft: 0,
-      minHeight: 800,
+      minHeight: 1000,
   },
-  // backgroundWhite: {
-  //   backgroundColor: "#FFF",
-  // }
 });
 
 
@@ -38,7 +38,6 @@ export default function App() {
   const classes = useStyles();
   return (
     <div className={classes.backgroundHome}>
-      {/* <div className={classes.backgroundWhite}> */}
     <Router>
       <ThemeProvider theme={createMuiTheme}>
       <Appbar />

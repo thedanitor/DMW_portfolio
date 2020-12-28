@@ -3,8 +3,8 @@ import React, {
   } from "react";
 import contactInfo from "../utils/contactInfo";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+// import Typography from "@material-ui/core/Typography";
+// import Divider from "@material-ui/core/Divider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
@@ -16,10 +16,14 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   iconLink: {
-    margin: "2rem",
+    margin: "1rem 2rem",
   },
   container: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
+    position: "fixed",
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
 }));
 
@@ -54,12 +58,12 @@ export default function Footer() {
 
   return (
     <div className={classes.container}>
-      <Divider style={{ margin: "24px auto", width: "80%" }} />
-      <Grid container justify={"center"} spacing={2}>
+      {/* <Divider style={{ margin: "24px auto", width: "80%" }} /> */}
+      {/* <Grid container justify={"center"} spacing={2}>
         <Grid item xs={12}>
           <Typography align={"center"}>© Copyright 2020 Dan Weikart</Typography>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid container justify={"center"} spacing={2}>
         <Grid item align={"center"} xs={12} sm={12} md={10} lg={6}>
           {contactInfo.map((infoItem, index) => (
@@ -75,7 +79,7 @@ export default function Footer() {
                 className={classes.iconLink}
                 icon={infoItem.icon}
                 aria-label={infoItem.ariaLabel}
-                size="3x"
+                size="2x"
                 color={infoItem.color}
                 // onMouseEnter={hoverOn}
                 // onMouseOut={hoverOff}
