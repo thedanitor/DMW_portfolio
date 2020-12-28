@@ -49,11 +49,11 @@ const useStyles = makeStyles(theme => ({
     display: "none",
   },
   drawer: {
-    width: drawerWidth,
+    // width: drawerWidth,
     flexShrink: 0,
   },
   drawerPaper: {
-    width: drawerWidth,
+    // width: drawerWidth,
     backgroundColor: "rgba(119, 119, 119, 0.9)",
   },
   drawerHeader: {

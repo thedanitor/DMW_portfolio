@@ -21,16 +21,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function About() {
-    const classes = useStyles();
+  const classes = useStyles();
 
   return (
     // <div
     // className={classes.root}
     // >
-      <Container className={classes.root}>
-        
-        <Typography variant="h2">About Me</Typography>
-        <Grid container>
+    <Container className={classes.root}>
+      <Typography variant="h2">About Me</Typography>
+      <Grid container>
         <Paper className={classes.paper}>
           <Typography variant="p">
             Chemist turned web developer has the formula to synthesize
@@ -45,22 +44,24 @@ export default function About() {
 
           <br></br>
           <Typography variant="p">
-            Recent graduate of University of Washington's coding bootcamp for
-            full-stack web development. I have learned so much since I started
-            the course and I am improving and learning more daily.
+            As a recent graduate of University of Washington's coding bootcamp
+            for full-stack web development I have learned so much in the past
+            year. I am continually building on this solid foundation by independently studying
+            and applying new techniques, practices, libraries, and languages.
+            
           </Typography>
-          </Paper>
-          <Paper className={classes.paper}>
+        </Paper>
+        <Paper className={classes.paper}>
+          When I am not coding I am hopefully biking, hiking, camping, reading, or playing music.
           {/* <Typography variant="p">
             My hobbies include hiking, camping, biking, reading, cooking,
             listening to and playing music. Causes I am dedicated to are social
             justice, sustainability, and climate change. It would be my dream to
             incorporate any of these passions into my work.
           </Typography> */}
-          </Paper>
-        </Grid>
-        
-      </Container>
+        </Paper>
+      </Grid>
+    </Container>
     // </div>
   );
 }
