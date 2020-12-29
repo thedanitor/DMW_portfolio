@@ -13,10 +13,11 @@ import Skill from "../components/Skill";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   paper: {
-    backgroundColor: "rgba(119, 119, 119, 0.5)",
+    backgroundColor: "rgba(97,158,215,0.7)",
   },
   boldFont: {
     fontWeight: "bold",
@@ -42,6 +43,7 @@ export default function Skills() {
           {frontEndSkills.map(skill => (
             <List>
               <Skill skill={skill}></Skill>
+              <Divider style={{  width: "80%" }} />
             </List>
           ))}
           </Paper>

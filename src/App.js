@@ -29,7 +29,7 @@ const useStyles = makeStyles({
       // marginBottom: 0,
       // marginRight: 0,
       // marginLeft: 0,
-      minHeight: 1000,
+      minHeight: 937,
   },
 });
 

@@ -9,7 +9,7 @@ export default createMuiTheme({
     //   white: "rgba(119, 119, 119, 0.2)",
     // },
     primary: {
-        main: "rgba(119, 119, 119, 0.2)",
+        main: "rgba(97,158,215,0.2)",
     },
     secondary: {
       main: '#000080',

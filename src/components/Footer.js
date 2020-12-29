@@ -14,12 +14,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import Tooltip from '@material-ui/core/Tooltip';
 
+
 const useStyles = makeStyles(theme => ({
   iconLink: {
     margin: "1rem 2rem",
+    // backgroundColor: "black",
   },
   container: {
-    backgroundColor: "rgba(119, 119, 119, 0.7)",
+    backgroundColor: "rgba(119, 119, 119, 0.5)",
     position: "fixed",
     bottom: 0,
     left: 0,
