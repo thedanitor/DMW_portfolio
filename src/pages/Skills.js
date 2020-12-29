@@ -18,6 +18,9 @@ const useStyles = makeStyles({
   paper: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
   },
+  boldFont: {
+    fontWeight: "bold",
+  },
 });
 
 export default function Skills() {

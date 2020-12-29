@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     margin: "1rem 2rem",
   },
   container: {
-    backgroundColor: "rgba(119, 119, 119, 0.5)",
+    backgroundColor: "rgba(119, 119, 119, 0.7)",
     position: "fixed",
     bottom: 0,
     left: 0,

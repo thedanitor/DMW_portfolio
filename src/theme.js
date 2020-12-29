@@ -12,7 +12,7 @@ export default createMuiTheme({
         main: "rgba(119, 119, 119, 0.2)",
     },
     secondary: {
-      main: '#4caf50',
+      main: '#000080',
     },
   },
   typography: {

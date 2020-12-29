@@ -3,15 +3,25 @@ import React from 'react'
 // import Grid from "@material-ui/core/Grid";
 // import Slide from "@material-ui/core/Slide";
 // import { makeStyles } from "@material-ui/core/styles";
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 import ListItem from '@material-ui/core/ListItem';
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+    boldFont: {
+      fontWeight: "bold",
+    },
+  });
 
 export default function Skill({
     skill
 }) {
+    const classes = useStyles();
     return (
     <ListItem>
+        <Typography variant="h5" color="secondary" className={classes.boldFont}>
         {skill}
+        </Typography>
     </ListItem>
     )
 }
