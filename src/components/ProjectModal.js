@@ -70,8 +70,6 @@ export default function ProjectModal({
           size="small"
           color="secondary"
           onClick={handleClose}
-          // target="_blank"
-          // rel="noopener noreferrer"
           className="btn"
         >
           Close

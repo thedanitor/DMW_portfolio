@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+import "@fontsource/quantico";
 
 export default createMuiTheme({
   
@@ -14,4 +15,9 @@ export default createMuiTheme({
       main: '#4caf50',
     },
   },
+  typography: {
+    fontFamily: [
+      'Quantico'
+    ]
+  }
 });
