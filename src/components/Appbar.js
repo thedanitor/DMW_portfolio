@@ -90,6 +90,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   sectionDesktop: {
+    margin: "auto",
     display: "none",
     justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
