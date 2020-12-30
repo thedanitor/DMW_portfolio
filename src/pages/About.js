@@ -24,7 +24,7 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
+    <Container id="about" className={classes.root}>
       <Typography variant="h2">About Me</Typography>
       <Grid container>
         <Paper className={classes.paper}>

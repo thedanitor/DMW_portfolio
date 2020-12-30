@@ -54,7 +54,7 @@ export default function Projects() {
 
 
     return (
-        <Container>
+        <Container id="projects">
         <Typography
             gutterBottom
             variant="h2"

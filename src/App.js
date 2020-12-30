@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import React, { 
   // useState, useEffect
  } from "react";
@@ -23,13 +23,19 @@ const useStyles = makeStyles({
       backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
-      // backgroundColor: "#464646",
-      height: "100%",
+      backgroundColor: "rgb(97,158,215)",
+      minHeight: "100%",
+      minWidth: 1024,
+      width: "100%",
+      height: "auto",
+      position: "fixed",
+      // top: 0,
+      // left: 0,
       // marginTop: 0,
       // marginBottom: 0,
       // marginRight: 0,
       // marginLeft: 0,
-      minHeight: 937,
+      // minHeight: 937,
   },
 });
 
@@ -38,20 +44,19 @@ export default function App() {
   const classes = useStyles();
   return (
     <div className={classes.backgroundHome}>
-    <Router>
+   <Router>
       <ThemeProvider theme={createMuiTheme}>
       <Appbar />
-      {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/skills" component={Skills} />
-          {/* <Route exact path="/contact" component={Contact} /> */}
         </Switch>
         <Footer />
         </ThemeProvider>
     </Router>
+
     </div>
   );
 }

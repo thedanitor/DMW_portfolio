@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 export default function Skills() {
   const classes = useStyles();
   return (
-    <Container>
+    <Container id="skills">
       <Typography
         gutterBottom
         variant="h2"

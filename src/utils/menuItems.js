@@ -12,11 +12,11 @@ function MenuItem(ariaLabel, icon, pLabel, link) {
 
 const home = new MenuItem("home", <HomeIcon />, "Home", "/");
 
-const about = new MenuItem("about", <InfoIcon />, "About", "/about");
+const about = new MenuItem("about", <InfoIcon />, "About", "#about");
 
-const projects = new MenuItem("projects", <CreateIcon />, "Projects", "/projects");
+const projects = new MenuItem("projects", <CreateIcon />, "Projects", "#projects");
 
-const skills = new MenuItem("skills", <CategoryIcon />, "Skills", "/skills");
+const skills = new MenuItem("skills", <CategoryIcon />, "Skills", "#skills");
 
 let menuItems = [home, about, projects, skills];
 
