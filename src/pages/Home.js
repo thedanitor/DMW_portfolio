@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Background from "../assets/images/LakeMargaret.jpg";
 import DanPhoto from "../assets/images/DanWeikart.jpg";
-// import Paper from "@material-ui/core/Paper";
+import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -42,6 +42,9 @@ const useStyles = makeStyles({
   name: {
     display: "block",
   },
+  clearPaper: {
+    backgroundColor: "rgba(0, 0, 0, 0)",
+  },
 });
 
 export default function Home() {
@@ -53,13 +56,15 @@ export default function Home() {
         
           <Grid item>
           <Slide
-              direction="up"
+              direction="left"
               in="true"
-              style={{ transitionDelay: "500ms" }}
+              style={{ transitionDelay: "750ms" }}
             >
+                <Paper className={classes.clearPaper}>
             <Typography className={classes.name} variant="h2" color="secondary">
               Dan Weikart
             </Typography>
+            </Paper>
             </Slide>
           </Grid>
           
@@ -70,7 +75,7 @@ export default function Home() {
           <Slide
               direction="right"
               in="true"
-              style={{ transitionDelay: "500ms" }}
+              style={{ transitionDelay: "750ms" }}
             >
               <Card>
                 <CardMedia
