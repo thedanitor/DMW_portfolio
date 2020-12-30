@@ -170,20 +170,20 @@ export default function PersistentDrawerLeft() {
         >
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button color="inherit" href="/">
+            <Button color="secondary" href="/">
               Home
             </Button>
-            <Button color="inherit" href="/About">
+            <Button color="secondary" href="/About">
               About Me
             </Button>
-            <Button color="inherit" href="/Projects">
+            <Button color="secondary" href="/Projects">
               Projects
             </Button>
-            <Button color="inherit" href="/Skills">
+            <Button color="secondary" href="/Skills">
               Skills
             </Button>
             <Button
-              color="inherit"
+              color="secondary"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"

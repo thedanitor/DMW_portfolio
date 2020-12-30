@@ -47,7 +47,6 @@ const useStyles = makeStyles({
     // position: "fixed",
     // top: 0,
     // left: 0,
-    marginTop: -100,
     // marginBottom: 0,
     // marginRight: 0,
     // marginLeft: 0,
