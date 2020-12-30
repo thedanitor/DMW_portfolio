@@ -4,6 +4,12 @@ import Background from "../assets/images/LakeMargaret.jpg"
 
 
 const useStyles = makeStyles({
+    root: {
+        display: "flex",
+        flexWrap: "wrap",
+        paddingTop: 200,
+        paddingBottom: 200,
+      },
     backgroundHome: {
         backgroundImage: `url(${Background})`,
         backgroundSize: "cover",
@@ -35,7 +41,7 @@ export default function Home() {
         <div 
         className={classes.backgroundHome}
         >
-            <h1>Home</h1>
+            <h1 className={classes.root}>Home</h1>
         </div>
     )
 }

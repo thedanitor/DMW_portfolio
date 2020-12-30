@@ -13,11 +13,39 @@ import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 // import Button from "@material-ui/core/Button";
+import BackgroundProjects from "../assets/images/LakeMargaret_center.jpg";
 
 const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    paddingTop: 200,
+    paddingBottom: 200,
+  },
   clearPaper: {
     backgroundColor: "rgba(0, 0, 0, 0)",
   },
+  backgroundProjects: {
+    backgroundImage: `url(${BackgroundProjects})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    
+    // minWidth: 1024,
+    width: "100%",
+    height: "auto",
+    minHeight: 1000,
+    // position: "fixed",
+    // top: 0,
+    // left: 0,
+    marginTop: -100,
+    // marginBottom: 0,
+    // marginRight: 0,
+    // marginLeft: 0,
+    // minHeight: 937,
+},
 });
 
 export default function Projects() {
@@ -54,7 +82,8 @@ export default function Projects() {
 
 
     return (
-        <Container id="projects">
+      <div className={classes.backgroundProjects}>
+        <Container id="projects" className={classes.root}>
         <Typography
             gutterBottom
             variant="h2"
@@ -86,5 +115,6 @@ export default function Projects() {
               ))}
             </Grid>
       </Container>
+      </div>
     )
 }

@@ -11,11 +11,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexWrap: "wrap",
     paddingTop: 200,
-    // "& > *": {
-    //   margin: theme.spacing(1),
-    //   width: theme.spacing(16),
-    //   height: theme.spacing(16),
-    // },
+    paddingBottom: 200,
   },
   paper: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
