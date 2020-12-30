@@ -14,31 +14,61 @@ import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
+import BackgroundSkills from "../assets/images/LakeMargaret_bottom.jpg";
 
 const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    paddingTop: 200,
+    paddingBottom: 200,
+  },
   paper: {
     backgroundColor: "rgba(97,158,215,0.7)",
   },
   boldFont: {
     fontWeight: "bold",
   },
+  backgroundSkills: {
+    backgroundImage: `url(${BackgroundSkills})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    
+    // minWidth: 1024,
+    width: "100%",
+    height: "auto",
+    minHeight: 1000,
+    // position: "fixed",
+    // top: 0,
+    // left: 0,
+    marginTop: -100,
+    // marginBottom: 0,
+    // marginRight: 0,
+    // marginLeft: 0,
+    // minHeight: 937,
+},
 });
 
 export default function Skills() {
   const classes = useStyles();
   return (
-    <Container id="skills">
+    <div className={classes.backgroundSkills}>
+    <Container id="skills" className={classes.root}>
       <Typography
         gutterBottom
         variant="h2"
         component="h2"
-        className="project-title"
+        className="skills-title"
+        color="secondary"
       >
         Skills
       </Typography>
       <Grid container justify={"center"} spacing={5}>
         <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
+          <Slide direction="right" in="true" style={{ transitionDelay: "500ms" }}>
             <Paper className={classes.paper}>
           {frontEndSkills.map(skill => (
             <List>
@@ -50,7 +80,7 @@ export default function Skills() {
           </Slide>
         </Grid>
         <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
+          <Slide direction="up" in="true" style={{ transitionDelay: "1000ms" }}>
             <Paper className={classes.paper}>
           {backEndSkills.map(skill => (
             <List>
@@ -61,7 +91,7 @@ export default function Skills() {
           </Slide>
         </Grid>
         <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
+          <Slide direction="left" in="true" style={{ transitionDelay: "1500ms" }}>
             <Paper className={classes.paper}>
           {relatedSkills.map(skill => (
             <List>
@@ -73,5 +103,6 @@ export default function Skills() {
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 }
