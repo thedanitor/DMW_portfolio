@@ -4,11 +4,13 @@ import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import BackgroundAbout from "../assets/images/LakeMargaret_top.jpg"
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
+    paddingTop: 200,
     // "& > *": {
     //   margin: theme.spacing(1),
     //   width: theme.spacing(16),
@@ -17,13 +19,36 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
+    padding: "3rem",
   },
+  backgroundAbout: {
+    backgroundImage: `url(${BackgroundAbout})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    
+    // minWidth: 1024,
+    width: "100%",
+    height: "auto",
+    minHeight: 1000,
+    // position: "fixed",
+    // top: 0,
+    // left: 0,
+    marginTop: -100,
+    // marginBottom: 0,
+    // marginRight: 0,
+    // marginLeft: 0,
+    // minHeight: 937,
+},
 }));
 
 export default function About() {
   const classes = useStyles();
 
   return (
+    <div className={classes.backgroundAbout}>
     <Container id="about" className={classes.root}>
       <Typography variant="h2">About Me</Typography>
       <Grid container>
@@ -60,5 +85,6 @@ export default function About() {
         </Paper>
       </Grid>
     </Container>
+    </div>
   );
 }
