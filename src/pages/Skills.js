@@ -24,7 +24,10 @@ const useStyles = makeStyles({
     paddingBottom: 200,
   },
   paper: {
-    backgroundColor: "rgba(97,158,215,0.7)",
+    backgroundColor: "rgba(97,158,215,0.95)",
+  },
+  list: {
+    alignContent: "center",
   },
   boldFont: {
     fontWeight: "bold",
@@ -71,7 +74,7 @@ export default function Skills() {
           <Slide direction="right" in="true" style={{ transitionDelay: "500ms" }}>
             <Paper className={classes.paper}>
           {frontEndSkills.map(skill => (
-            <List>
+            <List className={classes.list}>
               <Skill skill={skill}></Skill>
               <Divider style={{  width: "80%" }} />
             </List>

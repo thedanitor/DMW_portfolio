@@ -10,7 +10,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
     boldFont: {
       fontWeight: "bold",
+      textAlign: "center"
     },
+    
   });
 
 export default function Skill({
@@ -18,7 +20,7 @@ export default function Skill({
 }) {
     const classes = useStyles();
     return (
-    <ListItem>
+    <ListItem alignItems="flex-start">
         <Typography variant="h5" color="secondary" className={classes.boldFont}>
         {skill}
         </Typography>

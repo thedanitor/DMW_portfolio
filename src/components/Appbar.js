@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
   },
   appBar: {
+    boxShadow: "none",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -54,7 +55,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawerPaper: {
     // width: drawerWidth,
-    backgroundColor: "rgba(97,158,215,0.2)",
+    backgroundColor: "rgba(97,158,215,0.95)",
   },
   drawerHeader: {
     display: "flex",
@@ -156,7 +157,8 @@ export default function PersistentDrawerLeft() {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="static"
+        position="fixed"
+        color="transparent"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
