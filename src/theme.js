@@ -19,6 +19,12 @@ export default createMuiTheme({
       root: {
         background: "rgba(97,158,215,0.95)",
       }
+    },
+
+    MuiMenu: {
+      list: {
+        padding: 0,
+      }
     }
   },
 
