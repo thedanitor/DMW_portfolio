@@ -14,13 +14,13 @@ import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
-import BackgroundSkills from "../assets/images/LakeMargaret_bottom.jpg";
+import BackgroundSkills from "../assets/images/LakeMargaret_topLeft1920.jpg";
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    paddingTop: 200,
+    paddingTop: 100,
     paddingBottom: 200,
   },
   paper: {
@@ -42,9 +42,9 @@ const useStyles = makeStyles({
     
     // minWidth: 1024,
     width: "100%",
-    height: "auto",
-    minHeight: 1000,
-    // position: "fixed",
+    height: "100%",
+    // minHeight: 1000,
+    position: "fixed",
     // top: 0,
     // left: 0,
     // marginBottom: 0,
@@ -57,6 +57,12 @@ const useStyles = makeStyles({
 export default function Skills() {
   const classes = useStyles();
   return (
+    <Slide
+    direction="left"
+    in="true"
+    // style={{ transitionDelay: "500ms" }}
+    timeout={750}
+  >
     <div className={classes.backgroundSkills}>
     <Container id="skills" className={classes.root}>
       <Typography
@@ -70,7 +76,7 @@ export default function Skills() {
       </Typography>
       <Grid container justify={"center"} spacing={5}>
         <Grid item sm={6} md={4}>
-          <Slide direction="right" in="true" style={{ transitionDelay: "500ms" }}>
+          <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
             <Paper className={classes.paper}>
           {frontEndSkills.map(skill => (
             <List className={classes.list}>
@@ -93,7 +99,7 @@ export default function Skills() {
           </Slide>
         </Grid>
         <Grid item sm={6} md={4}>
-          <Slide direction="left" in="true" style={{ transitionDelay: "1500ms" }}>
+          <Slide direction="up" in="true" style={{ transitionDelay: "1500ms" }}>
             <Paper className={classes.paper}>
           {relatedSkills.map(skill => (
             <List>
@@ -106,5 +112,6 @@ export default function Skills() {
       </Grid>
     </Container>
     </div>
+    </Slide>
   );
 }

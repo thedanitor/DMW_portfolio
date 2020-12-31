@@ -4,13 +4,14 @@ import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import BackgroundAbout from "../assets/images/LakeMargaret_top.jpg"
+import BackgroundAbout from "../assets/images/LakeMargaret_topRight1920.jpg"
+import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    paddingTop: 200,
+    paddingTop: 100,
     paddingBottom: 200,
   },
   paper: {
@@ -27,9 +28,9 @@ const useStyles = makeStyles(theme => ({
     
     // minWidth: 1024,
     width: "100%",
-    height: "auto",
-    minHeight: 1000,
-    // position: "fixed",
+    height: "100%",
+    // minHeight: 1000,
+    position: "fixed",
     // top: 0,
     // left: 0,
     // marginBottom: 0,
@@ -43,6 +44,12 @@ export default function About() {
   const classes = useStyles();
 
   return (
+    <Slide
+    direction="left"
+    in="true"
+    // style={{ transitionDelay: "500ms" }}
+    timeout={750}
+  >
     <div className={classes.backgroundAbout}>
     <Container id="about" className={classes.root}>
       <Typography variant="h2">About Me</Typography>
@@ -81,5 +88,6 @@ export default function About() {
       </Grid>
     </Container>
     </div>
+    </Slide>
   );
 }

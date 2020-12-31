@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Background from "../assets/images/LakeMargaret.jpg";
+import Background from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
 import DanPhoto from "../assets/images/DanWeikart.jpg";
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexWrap: "wrap",
     margin: "auto",
-    paddingTop: 200,
+    paddingTop: 100,
     paddingBottom: 200,
   },
   backgroundHome: {
@@ -29,9 +29,9 @@ const useStyles = makeStyles({
 
     // minWidth: 1024,
     width: "100%",
-    height: "auto",
-    minHeight: 1000,
-    // position: "fixed",
+    height: "100%",
+    // minHeight: 1000,
+    position: "fixed",
     // top: 0,
     // left: 0,
     // marginTop: -100,
