@@ -22,6 +22,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
+import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 300;
 
@@ -231,15 +232,29 @@ export default function PersistentDrawerLeft() {
             </Button>
           </div>
           <div className={classes.sectionMobile}>
-            <IconButton
+            {/* <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              color="primary"
             >
               <MoreIcon />
-            </IconButton>
+            </IconButton> */}
+            <Button
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="primary"
+            >
+              <FontAwesomeIcon
+                icon={faHamburger}
+                aria-label="hamburger"
+                size="2x"
+                className={classes.navIconMobile}
+              />
+            </Button>
           </div>
         </Toolbar>
       </AppBar>
@@ -255,22 +270,31 @@ export default function PersistentDrawerLeft() {
         onClose={handleMobileMenuClose}
       >
         {menuItems.map((menuItem, index) => (
-          <MenuItem key={index} component={Link} to={menuItem.link} color="primary" className={classes.navMenuItemMobile}>
+          <MenuItem
+            key={index}
+            component={Link}
+            to={menuItem.link}
+            color="primary"
+            className={classes.navMenuItemMobile}
+          >
             <Button className={classes.navButtonMobile}>
-            {/* <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                   icon={menuItem.icon}
                   aria-label={menuItem.ariaLabel}
                   // size="3x"
                   className={classes.navIconMobile}
                   
                 /> */}
-            {menuItem.pLabel}
+              {menuItem.pLabel}
             </Button>
           </MenuItem>
         ))}
         <MenuItem className={classes.navMenuItemMobile}>
-        <Button onClick={handleDrawerOpen} className={classes.navButtonMobile}>
-        {/* <FontAwesomeIcon
+          <Button
+            onClick={handleDrawerOpen}
+            className={classes.navButtonMobile}
+          >
+            {/* <FontAwesomeIcon
                   icon={faPhoneSquare}
                   aria-label="contact"
                   // size="3x"
@@ -278,7 +302,7 @@ export default function PersistentDrawerLeft() {
                   
                 /> */}
             Contact
-            </Button>
+          </Button>
         </MenuItem>
       </Menu>
       {renderMenu}
