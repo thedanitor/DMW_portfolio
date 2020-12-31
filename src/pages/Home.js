@@ -89,8 +89,8 @@ export default function Home() {
           <Slide
               direction="right"
               in="true"
-              // style={{ transitionDelay: "1000ms" }}
-              timeout={1250}
+              style={{ transitionDelay: "1000ms" }}
+              // timeout={1250}
             >
               <Card className={classes.photo}>
                 <CardMedia

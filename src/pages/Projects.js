@@ -6,8 +6,6 @@ import Project from "../components/Project";
 import portfolioList from "../utils/portfolioList";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-// import API from "../../utils/API";
-// import CategorySelector from "../../components/CategorySelector";
 import Slide from "@material-ui/core/Slide";
 // import ArrowButtons from "../../components/ArrowButtons";
 import { makeStyles } from "@material-ui/core/styles";
@@ -21,6 +19,7 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     paddingTop: 100,
     paddingBottom: 200,
+    justifyContent: "center"
   },
   clearPaper: {
     backgroundColor: "rgba(0, 0, 0, 0)",
@@ -95,13 +94,14 @@ export default function Projects() {
             variant="h2"
             component="h2"
             className="project-title"
+            color="primary"
           >
             My Projects
           </Typography>
             <Grid container justify={"center"} spacing={5}>
             {portfolioList.map((proj, index) => (
                 <Grid item md={6} lg={4} key={index}>
-                  <Slide direction="up" in="true" style={{ transitionDelay: '500ms'}}>
+                  <Slide direction="up" in="true" style={{ transitionDelay:  proj.transition  }}>
                     <Paper
                     className={classes.clearPaper}
                     >
@@ -113,6 +113,7 @@ export default function Projects() {
                       description={proj.description}
                       webUrl={proj.webUrl}
                       githubUrl={proj.githubUrl}
+                      transition={proj.transition}
                       key={index}
                     />
                     </Paper>
