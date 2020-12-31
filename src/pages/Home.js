@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Background from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
+import BackgroundHome from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
 import DanPhoto from "../assets/images/DanWeikart.jpg";
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     paddingBottom: 200,
   },
   backgroundHome: {
-    backgroundImage: `url(${Background})`,
+    backgroundImage: `url(${BackgroundHome})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",

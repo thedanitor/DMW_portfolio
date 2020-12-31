@@ -13,7 +13,7 @@ import Skill from "../components/Skill";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
+// import Divider from "@material-ui/core/Divider";
 import BackgroundSkills from "../assets/images/LakeMargaret_topLeft1920.jpg";
 
 const useStyles = makeStyles({
@@ -22,12 +22,14 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     paddingTop: 100,
     paddingBottom: 200,
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: "rgba(97,158,215,0.95)",
+    textAlign: "center",
   },
   list: {
-    alignContent: "center",
+    textAlign: "center",
   },
   boldFont: {
     fontWeight: "bold",
@@ -39,7 +41,7 @@ const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
-    
+
     // minWidth: 1024,
     width: "100%",
     height: "100%",
@@ -51,67 +53,106 @@ const useStyles = makeStyles({
     // marginRight: 0,
     // marginLeft: 0,
     // minHeight: 937,
-},
+  },
 });
 
 export default function Skills() {
   const classes = useStyles();
   return (
     <Slide
-    direction="left"
-    in="true"
-    // style={{ transitionDelay: "500ms" }}
-    timeout={750}
-  >
-    <div className={classes.backgroundSkills}>
-    <Container id="skills" className={classes.root}>
-      <Typography
-        gutterBottom
-        variant="h2"
-        component="h2"
-        className="skills-title"
-        color="secondary"
-      >
-        Skills
-      </Typography>
-      <Grid container justify={"center"} spacing={5}>
-        <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "500ms" }}>
-            <Paper className={classes.paper}>
-          {frontEndSkills.map(skill => (
-            <List className={classes.list}>
-              <Skill skill={skill}></Skill>
-              <Divider style={{  width: "80%" }} />
-            </List>
-          ))}
-          </Paper>
-          </Slide>
-        </Grid>
-        <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "1000ms" }}>
-            <Paper className={classes.paper}>
-          {backEndSkills.map(skill => (
-            <List>
-              <Skill skill={skill}></Skill>
-            </List>
-          ))}
-          </Paper>
-          </Slide>
-        </Grid>
-        <Grid item sm={6} md={4}>
-          <Slide direction="up" in="true" style={{ transitionDelay: "1500ms" }}>
-            <Paper className={classes.paper}>
-          {relatedSkills.map(skill => (
-            <List>
-              <Skill skill={skill}></Skill>
-            </List>
-          ))}
-          </Paper>
-          </Slide>
-        </Grid>
-      </Grid>
-    </Container>
-    </div>
+      direction="left"
+      in="true"
+      // style={{ transitionDelay: "500ms" }}
+      timeout={750}
+    >
+      <div className={classes.backgroundSkills}>
+        <Container id="skills" className={classes.root}>
+          <Typography
+            gutterBottom
+            variant="h2"
+            component="h2"
+            className="skills-title"
+            color="secondary"
+          >
+            Technical Skills
+          </Typography>
+          <Grid container justify={"center"} spacing={5}>
+            <Grid item sm={6} md={4}>
+              <Slide
+                direction="up"
+                in="true"
+                style={{ transitionDelay: "500ms" }}
+              >
+                <Paper className={classes.paper}>
+                  <Typography
+                    gutterBottom
+                    variant="h3"
+                    component="h3"
+                    className="skills-title"
+                    color="secondary"
+                  >
+                    Client Side
+                  </Typography>
+                  {frontEndSkills.map(skill => (
+                    <List className={classes.list}>
+                      <Skill skill={skill}></Skill>
+                      {/* <Divider style={{ width: "80%" }} /> */}
+                    </List>
+                  ))}
+                </Paper>
+              </Slide>
+            </Grid>
+            <Grid item sm={6} md={4}>
+              <Slide
+                direction="up"
+                in="true"
+                style={{ transitionDelay: "1000ms" }}
+              >
+                <Paper className={classes.paper}>
+                <Typography
+                    gutterBottom
+                    variant="h3"
+                    component="h3"
+                    className="skills-title"
+                    color="secondary"
+                  >
+                    Server Side
+                  </Typography>
+                  {backEndSkills.map(skill => (
+                    <List>
+                      <Skill skill={skill}></Skill>
+                    </List>
+                  ))}
+                </Paper>
+              </Slide>
+            </Grid>
+            <Grid item sm={6} md={4}>
+              <Slide
+                direction="up"
+                in="true"
+                style={{ transitionDelay: "1500ms" }}
+              >
+                <Paper className={classes.paper}>
+                <Typography
+                    gutterBottom
+                    variant="h3"
+                    component="h3"
+                    className="skills-title"
+                    color="secondary"
+                  >
+                    Related
+                  </Typography>
+                  {relatedSkills.map(skill => (
+                    <List>
+                      <Skill skill={skill}></Skill>
+                    </List>
+                  ))}
+                </Paper>
+              </Slide>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
     </Slide>
   );
 }
