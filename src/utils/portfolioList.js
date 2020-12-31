@@ -50,7 +50,7 @@ const aqirProject = new ProjectData(
   aqirImg,
   aqirWide,
   "HTML / CSS / JavaScript / MySQL / Node / Express / Handlebars / Bulma",
-  "AQIR is an exclusive retail website that allows users to buy and sell products from the comfort of their home. Just sign up, login, and add or sell products with a community of users from around the world.",
+  "AQIR is a mock retail website that allows users to buy and sell products from the comfort of their home. Just sign up, login, and add or sell products with a community of users from around the world.",
   "https://thawing-castle-93200.herokuapp.com/",
   "https://github.com/ngoudeau2012/project_aqir",
   "500ms",

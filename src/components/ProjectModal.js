@@ -10,12 +10,19 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     // color: "#000",
-    backgroundColor: "rgba(255, 255, 255, 0.75)",
+    backgroundColor: "rgba(97,158,215,0.95)",
+    border: "3px solid black",
   },
   media: {
     height: 300,
     width: 600,
   },
+  cardActions: {
+    justifyContent: "center",
+  },
+  cardContent: {
+    // borderTop: "3px solid black",
+  }
 });
 
 export default function ProjectModal({
@@ -33,18 +40,21 @@ export default function ProjectModal({
   return (
     <Card className={classes.root}>
       <CardMedia className={classes.media} image={imageLarge} title={name} />
-      <CardContent align={"center"}>
-        <Typography gutterBottom variant="h5" component="h2">
+      <CardContent align={"center"} className={classes.cardContent}>
+        <Typography gutterBottom variant="h4" component="h2" color="primary">
           {name}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body2" color="primary" component="body2">
           {description}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="h6" color="primary" component="h6">
+          Technologies Used:
+        </Typography>
+        <Typography variant="body2" color="primary" component="body2">
           {tech}
         </Typography>
       </CardContent>
-      <CardActions align={"center"}>
+      <CardActions className={classes.cardActions}>
         <Button
           size="small"
           variant="outlined"

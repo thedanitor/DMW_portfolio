@@ -96,7 +96,7 @@ export default function Projects() {
             className="project-title"
             color="primary"
           >
-            My Projects
+            Projects
           </Typography>
             <Grid container justify={"center"} spacing={5}>
             {portfolioList.map((proj, index) => (

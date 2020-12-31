@@ -10,7 +10,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 // import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 // import Button from "@material-ui/core/Button";
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -41,10 +41,11 @@ const useStyles = makeStyles({
   },
 
   title: {
-    height: 60,
+    // height: 60,
     textOverflow: "ellipsis",
     overflow: "hidden",
     whiteSpace: "no-wrap",
+    justifyContent: "center",
   },
 
   modal: {
@@ -133,9 +134,16 @@ export default function Project({
           aria-describedby={description}
           PaperComponent="Paper"
           className={classes.modal}
-          
         >
-          <DialogTitle id={name}>{name}</DialogTitle>
+          {/* <DialogTitle id={name} className={classes.title}>
+            <Typography
+             gutterBottom
+             variant="h2"
+             component="h2"
+             className="project-title"
+             color="primary"
+            >{name}</Typography>
+          </DialogTitle> */}
           <DialogContent>
             <ProjectModal
               name={name}

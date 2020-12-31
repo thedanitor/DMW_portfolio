@@ -129,7 +129,6 @@ const useStyles = makeStyles(theme => ({
   },
   navButtonDesktop: {
     fontWeight: "bold",
-    fontSize: "2em",
   },
 }));
 
