@@ -24,6 +24,7 @@ const useStyles = makeStyles({
   },
   clearPaper: {
     backgroundColor: "rgba(0, 0, 0, 0)",
+    boxShadow: "none",
   },
   backgroundProjects: {
     backgroundImage: `url(${BackgroundProjects})`,

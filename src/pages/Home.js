@@ -40,10 +40,18 @@ const useStyles = makeStyles({
     // minHeight: 937,
   },
   name: {
-    display: "block",
+    fontWeight: "bold",
+
   },
   clearPaper: {
     backgroundColor: "rgba(0, 0, 0, 0)",
+    boxShadow: "none",
+  },
+  photo: {
+      borderRadius: "50%",
+  },
+  fullStack: {
+      margin: "auto",
   },
 });
 
@@ -56,9 +64,9 @@ export default function Home() {
         
           <Grid item>
           <Slide
-              direction="left"
+              direction="down"
               in="true"
-              style={{ transitionDelay: "750ms" }}
+              style={{ transitionDelay: "500ms" }}
             >
                 <Paper className={classes.clearPaper}>
             <Typography className={classes.name} variant="h2" color="secondary">
@@ -69,17 +77,17 @@ export default function Home() {
           </Grid>
           
         </Grid>
-        <Grid container justify="center">
-       
-          <Grid item md={6} lg={4}>
+        <Grid container justify="center" spacing={3}>
+        <Grid item xs={3} sm={4}></Grid>
+          <Grid item xs={6} sm={4}>
           <Slide
               direction="right"
               in="true"
-              style={{ transitionDelay: "750ms" }}
+              style={{ transitionDelay: "1000ms" }}
             >
-              <Card>
+              <Card className={classes.photo}>
                 <CardMedia
-                  // className={classes.media}
+                  
                   image={DanPhoto}
                   component="img"
                   title="Dan Weikart"
@@ -87,9 +95,60 @@ export default function Home() {
               </Card>
               </Slide>
           </Grid>
-          
+          <Grid item xs={3} sm={4} className={classes.fullStack}>
+          <Slide
+              direction="up"
+              in="true"
+              style={{ transitionDelay: "1500ms" }}
+            >
+                <Paper className={classes.clearPaper}>
+            <Typography className={classes.name} variant="h4" color="secondary">
+              Full
+            </Typography>
+            </Paper>
+            </Slide>
+            <Slide
+              direction="up"
+              in="true"
+              style={{ transitionDelay: "2000ms" }}
+            >
+                <Paper className={classes.clearPaper}>
+            <Typography className={classes.name} variant="h4" color="secondary">
+              Stack 
+            </Typography>
+            </Paper>
+            </Slide>
+            <Slide
+              direction="up"
+              in="true"
+              style={{ transitionDelay: "2500ms" }}
+            >
+                <Paper className={classes.clearPaper}>
+            <Typography className={classes.name} variant="h4" color="secondary">
+              Web 
+            </Typography>
+            </Paper>
+            </Slide>
+            <Slide
+              direction="up"
+              in="true"
+              style={{ transitionDelay: "3000ms" }}
+            >
+                <Paper className={classes.clearPaper}>
+            <Typography className={classes.name} variant="h4" color="secondary">
+              Developer
+            </Typography>
+            </Paper>
+            </Slide>
+          </Grid>
         </Grid>
+        
+        {/* <Grid container justify="center"> */}
+          
+          
+        {/* </Grid> */}
       </Container>
+      
     </div>
   );
 }
