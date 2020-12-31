@@ -15,12 +15,13 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
-import Badge from "@material-ui/core/Badge";
+// import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 300;
 
@@ -36,8 +37,8 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginRight: drawerWidth,
+    // width: `calc(100% - ${drawerWidth}px)`,
+    // marginRight: drawerWidth,
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -99,13 +100,35 @@ const useStyles = makeStyles(theme => ({
   },
   sectionMobile: {
     display: "flex",
+
     [theme.breakpoints.up("sm")]: {
       display: "none",
       justify: "space-between",
     },
   },
-  iconLink: {
-    margin: "2rem",
+  mobileMenu: {
+    // backgroundColor: "rgba(97,158,215,0.7)",
+    color: "rgba(97,158,215,0.95)",
+    margin: 0,
+    padding: 0,
+  },
+  navMenuItemMobile: {
+    margin: 0,
+    // "& .Mui-focused": {
+    //   background: "rgb(54, 137, 214)",
+    // },
+    // backgroundColor: "rgba(97,158,215,0.7)",
+  },
+  navIconMobile: {
+    margin: "1rem",
+  },
+  navButtonMobile: {
+    margin: 0,
+    // height: "100%",
+  },
+  navButtonDesktop: {
+    fontWeight: "bold",
+    fontSize: "2em",
   },
 }));
 
@@ -164,26 +187,42 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar 
+        <Toolbar
         // alignItems="center"
-         
         >
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <Button color="secondary" href="/">
+            <Button
+              color="primary"
+              href="/"
+              className={classes.navButtonDesktop}
+            >
               Home
             </Button>
-            <Button color="secondary" href="/About">
-              About Me
+            <Button
+              color="primary"
+              href="/About"
+              className={classes.navButtonDesktop}
+            >
+              About
             </Button>
-            <Button color="secondary" href="/Projects">
+            <Button
+              color="primary"
+              href="/Projects"
+              className={classes.navButtonDesktop}
+            >
               Projects
             </Button>
-            <Button color="secondary" href="/Skills">
+            <Button
+              color="primary"
+              href="/Skills"
+              className={classes.navButtonDesktop}
+            >
               Skills
             </Button>
             <Button
-              color="secondary"
+              className={classes.navButtonDesktop}
+              color="primary"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
@@ -206,6 +245,7 @@ export default function PersistentDrawerLeft() {
       </AppBar>
       {/* renderMobileMenu */}
       <Menu
+        className={classes.mobileMenu}
         anchorEl={mobileMoreAnchorEl}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         id={mobileMenuId}
@@ -214,22 +254,31 @@ export default function PersistentDrawerLeft() {
         open={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
       >
-        {menuItems.map((item, index) => (
-          <MenuItem key={index} component={Link} to={item.link}>
-            <IconButton aria-label={item.ariaLabel} color="inherit">
-              <Badge color="secondary">{item.icon}</Badge>
-            </IconButton>
-            <p>{item.pLabel}</p>
+        {menuItems.map((menuItem, index) => (
+          <MenuItem key={index} component={Link} to={menuItem.link} color="primary" className={classes.navMenuItemMobile}>
+            <Button className={classes.navButtonMobile}>
+            {/* <FontAwesomeIcon
+                  icon={menuItem.icon}
+                  aria-label={menuItem.ariaLabel}
+                  // size="3x"
+                  className={classes.navIconMobile}
+                  
+                /> */}
+            {menuItem.pLabel}
+            </Button>
           </MenuItem>
         ))}
-        <MenuItem>
-          <IconButton
-            aria-label="contact"
-            color="inherit"
-            onClick={handleDrawerOpen}
-          >
-            <Badge color="secondary">Contact</Badge>
-          </IconButton>
+        <MenuItem className={classes.navMenuItemMobile}>
+        <Button onClick={handleDrawerOpen} className={classes.navButtonMobile}>
+        {/* <FontAwesomeIcon
+                  icon={faPhoneSquare}
+                  aria-label="contact"
+                  // size="3x"
+                  className={classes.navIconMobile}
+                  
+                /> */}
+            Contact
+            </Button>
         </MenuItem>
       </Menu>
       {renderMenu}
@@ -252,29 +301,24 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
 
-
-
         <List>
           {contactInfo.map((infoItem, index) => (
-            <ListItem
-            key={index}
-            >
-                <a
-                
-                  href={infoItem.href}
-                  target={infoItem.target}
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={infoItem.icon}
-                    aria-label={infoItem.ariaLabel}
-                    size="3x"
-                    className={classes.iconLink}
-                    color={infoItem.color}
-                  />
-                </a>
+            <ListItem key={index}>
+              <a
+                href={infoItem.href}
+                target={infoItem.target}
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={infoItem.icon}
+                  aria-label={infoItem.ariaLabel}
+                  size="3x"
+                  className={classes.iconLink}
+                  color={infoItem.color}
+                />
+              </a>
 
-                {infoItem.pLabel}
+              {infoItem.pLabel}
             </ListItem>
           ))}
         </List>

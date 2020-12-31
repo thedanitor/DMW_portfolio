@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
+import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles({
   root: {
@@ -58,7 +59,11 @@ const useStyles = makeStyles({
 export default function Home() {
   const classes = useStyles();
   return (
+    <Fade in="true" 
+    // timeout={5000}
+    >
     <div className={classes.backgroundHome}>
+      
       <Container id="about" className={classes.root}>
         <Grid container justify="center">
         
@@ -66,7 +71,8 @@ export default function Home() {
           <Slide
               direction="down"
               in="true"
-              style={{ transitionDelay: "500ms" }}
+              // style={{ transitionDelay: "500ms" }}
+              timeout={750}
             >
                 <Paper className={classes.clearPaper}>
             <Typography className={classes.name} variant="h2" color="secondary">
@@ -83,7 +89,8 @@ export default function Home() {
           <Slide
               direction="right"
               in="true"
-              style={{ transitionDelay: "1000ms" }}
+              // style={{ transitionDelay: "1000ms" }}
+              timeout={1250}
             >
               <Card className={classes.photo}>
                 <CardMedia
@@ -150,5 +157,6 @@ export default function Home() {
       </Container>
       
     </div>
+    </Fade>
   );
 }
