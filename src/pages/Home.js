@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import BackgroundHome from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
 import DanPhoto from "../assets/images/DanWeikart.jpg";
 import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
@@ -10,8 +9,13 @@ import Slide from "@material-ui/core/Slide";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import Fade from '@material-ui/core/Fade';
+import BackgroundHomeXl from "../assets/images/LakeMargaret_topWideFull.jpg";
+import BackgroundHomeLg from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
+import BackgroundHomeMd from "../assets/images/LakeMargaret_top1280.jpg";
+import BackgroundHomeSm from "../assets/images/LakeMargaret_top960.jpg";
+import BackgroundHomeXs from "../assets/images/LakeMargaret_top600.jpg";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
@@ -20,28 +24,83 @@ const useStyles = makeStyles({
     paddingBottom: 200,
   },
   backgroundHome: {
-    backgroundImage: `url(${BackgroundHome})`,
+    [theme.breakpoints.up("xl")]: {
+      backgroundImage: `url(${BackgroundHomeXl})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundColor: "rgb(97,158,215)",
+      // minWidth: 1024,
+      width: "100%",
+      height: "100%",
+      // minHeight: 1000,
+      position: "fixed",
+    },
+    [theme.breakpoints.between("sm", "xl")]: {
+    backgroundImage: `url(${BackgroundHomeLg})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
-
     // minWidth: 1024,
     width: "100%",
     height: "100%",
     // minHeight: 1000,
     position: "fixed",
-    // top: 0,
-    // left: 0,
-    // marginTop: -100,
-    // marginBottom: 0,
-    // marginRight: 0,
-    // marginLeft: 0,
-    // minHeight: 937,
   },
+  // [theme.breakpoints.between("sm", "lg")]: {
+  //   backgroundImage: `url(${BackgroundHomeMd})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center center",
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundAttachment: "fixed",
+  //   backgroundColor: "rgb(97,158,215)",
+  //   // minWidth: 1024,
+  //   width: "100%",
+  //   height: "100%",
+  //   // minHeight: 1000,
+  //   position: "fixed",
+  // },
+  // [theme.breakpoints.between("sm", "md")]: {
+  //   backgroundImage: `url(${BackgroundHomeSm})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center center",
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundAttachment: "fixed",
+  //   backgroundColor: "rgb(97,158,215)",
+  //   // minWidth: 1024,
+  //   width: "100%",
+  //   height: "100%",
+  //   // minHeight: 1000,
+  //   position: "fixed",
+  // },
+  [theme.breakpoints.between("xs", "sm")]: {
+    backgroundImage: `url(${BackgroundHomeSm})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    // minWidth: 1024,
+    width: "100%",
+    height: "100%",
+    // minHeight: 1000,
+    // position: "fixed",
+  },
+  },
+
+
   name: {
     fontWeight: "bold",
+    [theme.breakpoints.between("xs", "sm")]: {
+      MuiTypography: {
+        h4: {
+          fontSize: "1.75rem",
+        },
+      },
+    },
 
   },
   clearPaper: {
@@ -54,7 +113,7 @@ const useStyles = makeStyles({
   fullStack: {
       margin: "auto",
   },
-});
+}));
 
 export default function Home() {
   const classes = useStyles();
@@ -84,8 +143,8 @@ export default function Home() {
           
         </Grid>
         <Grid container justify="center" spacing={3}>
-        <Grid item xs={3} sm={4}></Grid>
-          <Grid item xs={6} sm={4}>
+        <Grid item xs={0} sm={4}></Grid>
+          <Grid item xs={9} sm={4}>
           <Slide
               direction="right"
               in="true"

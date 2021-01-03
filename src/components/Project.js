@@ -10,10 +10,10 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 // import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 // import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
+// import DialogTitle from "@material-ui/core/DialogTitle";
 import Zoom from "@material-ui/core/Zoom";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
