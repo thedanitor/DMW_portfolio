@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
 import "@fontsource/quantico";
 
 export default createMuiTheme({
@@ -8,53 +8,33 @@ export default createMuiTheme({
         background: "rgba(97,158,215,0.95)",
         "&$focused": {
           background: "rgb(54, 137, 214)",
-          // fontWeight: "bold"
         },
-        // focused: {
-        //   color: "rgb(54, 137, 214)",
-        // },
       },
     },
     MuiMenuPaper: {
       root: {
         background: "rgba(97,158,215,0.95)",
-      }
+      },
     },
-    // MuiSvgIcon: {
-    //   root: {
-    //     width: "2em",
-    //     height: "2em",
-    //     // fill: "blue"
-    //   }
-    // },
-    // MuiIconButton: {
-    //   root: {
-    //     color: "red",
-    //   }
-    // },
     MuiMenu: {
       list: {
         padding: 0,
-      }
-    }
+      },
+    },
   },
 
-  
   palette: {
-    // common: {
-    //   black: "rgba(119, 119, 119, 0.2)",
-    //   white: "rgba(119, 119, 119, 0.2)",
-    // },
     primary: {
-        main: "#000080",
+      // main: "#000080",
+      // main: "#B20000",
+      main: "#33FFE5",
     },
     secondary: {
-      main: '#000080',
+      // main: "#33FFE5",
+      main: "#B20000",
     },
   },
   typography: {
-    fontFamily: [
-      'Quantico'
-    ]
-  }
+    fontFamily: ["Quantico"],
+  },
 });
