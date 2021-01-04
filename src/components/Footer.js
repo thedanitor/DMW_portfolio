@@ -22,10 +22,13 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    right: 0,
+    // width: "100%",
+    // position: "fixed",
+    // bottom: 0,
+    // left: 0,
+    // right: 0,
+    // margin: 0,
+    // padding: 0,
   },
 }));
 
@@ -66,7 +69,9 @@ export default function Footer() {
           <Typography align={"center"}>© Copyright 2020 Dan Weikart</Typography>
         </Grid>
       </Grid> */}
-      <Grid container justify={"center"} spacing={2}>
+      <Grid container justify={"center"} 
+      // spacing={2}
+      >
         <Grid item align={"center"} xs={12} sm={12} md={10} lg={6}>
           {contactInfo.map((infoItem, index) => (
             <Tooltip title={infoItem.pLabel} key={index}>
