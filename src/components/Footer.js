@@ -17,12 +17,31 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 const useStyles = makeStyles(theme => ({
   iconLink: {
-    margin: "1rem 2rem",
+    [theme.breakpoints.up("sm")]: {
+      margin: "1rem 2rem",
+    },
+    [theme.breakpoints.between(300, "xs")]: {
+      margin: "1rem 1rem",
+    },
+    [theme.breakpoints.between(0, 300)]: {
+      margin: "1rem 3rem",
+    },
+    [theme.breakpoints.between(0, 262)]: {
+      margin: "1rem 4rem",
+    },
     // backgroundColor: "black",
   },
   container: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
-    marginTop: -61.5,
+    [theme.breakpoints.up(300)]: {
+      marginTop: -61.5,
+    },    
+    [theme.breakpoints.between(262, 300)]: {
+      marginTop: -184.5,
+    },
+    [theme.breakpoints.between(0, 262)]: {
+      marginTop: -307.5,
+    },
     // width: "100%",
     // position: "fixed",
     // bottom: 0,
@@ -77,12 +96,10 @@ export default function Footer() {
           {contactInfo.map((infoItem, index) => (
             <Tooltip title={infoItem.pLabel} key={index}>
             <Link
-            
               href={infoItem.href}
               target={infoItem.target}
               rel="noopener noreferrer"
             >
-              
               <FontAwesomeIcon
                 className={classes.iconLink}
                 icon={infoItem.icon}

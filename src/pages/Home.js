@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       minHeight: "100vh",
     },
     [theme.breakpoints.between("xs", "sm")]: {
-      backgroundImage: `url(${BackgroundHomeSm})`,
+      // backgroundImage: `url(${BackgroundHomeSm})`,
       backgroundSize: "cover",
       backgroundPosition: "center center",
       backgroundRepeat: "no-repeat",
@@ -57,6 +57,17 @@ const useStyles = makeStyles(theme => ({
       height: "100%",
       minHeight: "100vh",
     },
+    [theme.breakpoints.down(400)]: {
+         backgroundImage: `url(${BackgroundHomeSm})`,
+         backgroundSize: "cover",
+         backgroundPosition: "center center",
+         backgroundRepeat: "no-repeat",
+         backgroundAttachment: "fixed",
+         backgroundColor: "rgb(97,158,215)",
+         width: "100%",
+         height: "100%",
+         minHeight: "100vh",
+    }
   },
 
   name: {
@@ -91,7 +102,7 @@ export default function Home() {
       <div className={classes.backgroundHome}>
         <Container id="about" className={classes.root}>
           <Grid container justify="center">
-            <Grid item>
+            <Grid item sm={6}>
               <Slide
                 direction="down"
                 in="true"
