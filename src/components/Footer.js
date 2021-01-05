@@ -51,14 +51,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.between(0, 300)]: {
       display: "none",
     },
-
-    // width: "100%",
-    // position: "fixed",
-    // bottom: 0,
-    // left: 0,
-    // right: 0,
-    // margin: 0,
-    // padding: 0,
   },
 }));
 

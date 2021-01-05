@@ -13,7 +13,7 @@ import BackgroundHomeXl from "../assets/images/LakeMargaret_topWideFull.jpg";
 import BackgroundHomeLg from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
 import BackgroundHomeMd from "../assets/images/LakeMargaret_top1280.jpg";
 import BackgroundHomeSm from "../assets/images/LakeMargaret_top960.jpg";
-import BackgroundHomeXs from "../assets/images/LakeMargaret_top600.jpg";
+// import BackgroundHomeXs from "../assets/images/LakeMargaret_top600.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,65 +22,54 @@ const useStyles = makeStyles(theme => ({
     margin: "auto",
     paddingTop: 100,
     paddingBottom: 200,
+    [theme.breakpoints.between(0, "xs")]: {
+      paddingTop: 35,
+      paddingBottom: 75, 
+    }
   },
   backgroundHome: {
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    // backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    width: "100%",
+    height: "100%",
+    minHeight: "100vh",
     [theme.breakpoints.up("xl")]: {
       backgroundImage: `url(${BackgroundHomeXl})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center center",
-      backgroundRepeat: "no-repeat",
-      // backgroundAttachment: "fixed",
-      backgroundColor: "rgb(97,158,215)",
-      width: "100%",
-      height: "100%",
-      minHeight: "100vh",
     },
     [theme.breakpoints.between("sm", "xl")]: {
       backgroundImage: `url(${BackgroundHomeLg})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center center",
-      backgroundRepeat: "no-repeat",
-      // backgroundAttachment: "fixed",
-      backgroundColor: "rgb(97,158,215)",
-      width: "100%",
-      height: "100%",
-      minHeight: "100vh",
     },
     [theme.breakpoints.between("xs", "sm")]: {
-      // backgroundImage: `url(${BackgroundHomeSm})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center center",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      backgroundColor: "rgb(97,158,215)",
-      width: "100%",
-      height: "100%",
-      minHeight: "100vh",
+      backgroundImage: `url(${BackgroundHomeMd})`,
     },
     [theme.breakpoints.down(400)]: {
-         backgroundImage: `url(${BackgroundHomeSm})`,
-         backgroundSize: "cover",
-         backgroundPosition: "center center",
-         backgroundRepeat: "no-repeat",
-         backgroundAttachment: "fixed",
-         backgroundColor: "rgb(97,158,215)",
-         width: "100%",
-         height: "100%",
-         minHeight: "100vh",
-    }
-  },
-
-  name: {
-    fontWeight: "bold",
-    [theme.breakpoints.between("xs", "sm")]: {
-      MuiTypography: {
-        h4: {
-          fontSize: "1.75rem",
-        },
-      },
+      backgroundImage: `url(${BackgroundHomeSm})`,
     },
   },
-  clearPaper: {
+  nameText: {
+    fontWeight: "bold",
+    [theme.breakpoints.down(220)]: {
+      fontSize: "2rem",
+    },
+  },
+  stackText: {
+    fontWeight: "bold",
+    [theme.breakpoints.between(220, 300)]: {
+      fontSize: "1.5rem",
+    },
+    [theme.breakpoints.down(220)]: {
+      fontSize: "1rem",
+    },
+  },
+  clearPaperName: {
+    backgroundColor: "rgba(0, 0, 0, 0)",
+    boxShadow: "none",
+    textAlign: "center",
+  },
+  clearPaperStack: {
     backgroundColor: "rgba(0, 0, 0, 0)",
     boxShadow: "none",
   },
@@ -102,16 +91,16 @@ export default function Home() {
       <div className={classes.backgroundHome}>
         <Container id="about" className={classes.root}>
           <Grid container justify="center">
-            <Grid item sm={6}>
+            <Grid item sm={6} lg={4}>
               <Slide
                 direction="down"
                 in="true"
                 // style={{ transitionDelay: "500ms" }}
                 timeout={750}
               >
-                <Paper className={classes.clearPaper}>
+                <Paper className={classes.clearPaperName}>
                   <Typography
-                    className={classes.name}
+                    className={classes.nameText}
                     variant="h2"
                     color="secondary"
                   >
@@ -145,9 +134,9 @@ export default function Home() {
                 in="true"
                 style={{ transitionDelay: "1500ms" }}
               >
-                <Paper className={classes.clearPaper}>
+                <Paper className={classes.clearPaperStack}>
                   <Typography
-                    className={classes.name}
+                    className={classes.stackText}
                     variant="h4"
                     color="secondary"
                   >
@@ -160,9 +149,9 @@ export default function Home() {
                 in="true"
                 style={{ transitionDelay: "2000ms" }}
               >
-                <Paper className={classes.clearPaper}>
+                <Paper className={classes.clearPaperStack}>
                   <Typography
-                    className={classes.name}
+                    className={classes.stackText}
                     variant="h4"
                     color="secondary"
                   >
@@ -175,9 +164,9 @@ export default function Home() {
                 in="true"
                 style={{ transitionDelay: "2500ms" }}
               >
-                <Paper className={classes.clearPaper}>
+                <Paper className={classes.clearPaperStack}>
                   <Typography
-                    className={classes.name}
+                    className={classes.stackText}
                     variant="h4"
                     color="secondary"
                   >
@@ -190,9 +179,9 @@ export default function Home() {
                 in="true"
                 style={{ transitionDelay: "3000ms" }}
               >
-                <Paper className={classes.clearPaper}>
+                <Paper className={classes.clearPaperStack}>
                   <Typography
-                    className={classes.name}
+                    className={classes.stackText}
                     variant="h4"
                     color="secondary"
                   >
@@ -202,10 +191,6 @@ export default function Home() {
               </Slide>
             </Grid>
           </Grid>
-
-          {/* <Grid container justify="center"> */}
-
-          {/* </Grid> */}
         </Container>
       </div>
     </Fade>

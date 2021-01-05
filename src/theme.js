@@ -22,7 +22,6 @@ export default createMuiTheme({
       },
     },
   },
-
   palette: {
     primary: {
       // main: "#000080",
@@ -38,3 +37,4 @@ export default createMuiTheme({
     fontFamily: ["Quantico"],
   },
 });
+

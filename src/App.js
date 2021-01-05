@@ -14,7 +14,9 @@ import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 // import Background from "./assets/images/LakeMargaret.jpg"
 import createMuiTheme from "./theme";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, 
+  // responsiveFontSizes 
+} from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   backgroundApp: {
@@ -47,6 +49,7 @@ export default function App() {
     <div className={classes.backgroundApp}>
    <Router>
       <ThemeProvider theme={createMuiTheme}>
+      {/* <ThemeProvider theme={responsiveFontSizes}> */}
       <Appbar />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -56,6 +59,7 @@ export default function App() {
         </Switch>
         <Footer />
         </ThemeProvider>
+        {/* </ThemeProvider> */}
     </Router>
     </div>
   );
