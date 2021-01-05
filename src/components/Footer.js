@@ -23,25 +23,35 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.between(300, "xs")]: {
       margin: "1rem 1rem",
     },
-    [theme.breakpoints.between(0, 300)]: {
-      margin: "1rem 3rem",
-    },
-    [theme.breakpoints.between(0, 262)]: {
-      margin: "1rem 4rem",
-    },
-    // backgroundColor: "black",
+    // [theme.breakpoints.between(262, 300)]: {
+    //   margin: "1rem 3rem",
+    // },
+    // [theme.breakpoints.between(0, 262)]: {
+    //   margin: "1rem 4rem",
+    // },
+    // [theme.breakpoints.between(0, 300)]: {
+    //   // marginTop: -307.5,
+    //   // marginTop: 0,
+    //   height: 0,
+    //   hidden: true,
+    //   padding: 0
+    // },
   },
   container: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
     [theme.breakpoints.up(300)]: {
       marginTop: -61.5,
     },    
-    [theme.breakpoints.between(262, 300)]: {
-      marginTop: -184.5,
+    // [theme.breakpoints.between(262, 300)]: {
+    //   marginTop: -184.5,
+    // },
+    // [theme.breakpoints.between(0, 262)]: {
+    //   marginTop: -307.5,
+    // },
+    [theme.breakpoints.between(0, 300)]: {
+      display: "none",
     },
-    [theme.breakpoints.between(0, 262)]: {
-      marginTop: -307.5,
-    },
+
     // width: "100%",
     // position: "fixed",
     // bottom: 0,
