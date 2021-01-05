@@ -21,11 +21,11 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     margin: "auto",
     paddingTop: 100,
-    paddingBottom: 200,
+    paddingBottom: 100,
     [theme.breakpoints.between(0, "xs")]: {
       paddingTop: 35,
       paddingBottom: 75, 
-    }
+    },
   },
   backgroundHome: {
     backgroundSize: "cover",
@@ -68,6 +68,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(0, 0, 0, 0)",
     boxShadow: "none",
     textAlign: "center",
+    marginBottom: 20,
   },
   clearPaperStack: {
     backgroundColor: "rgba(0, 0, 0, 0)",
@@ -96,7 +97,7 @@ export default function Home() {
                 direction="down"
                 in="true"
                 // style={{ transitionDelay: "500ms" }}
-                timeout={750}
+                timeout={500}
               >
                 <Paper className={classes.clearPaperName}>
                   <Typography

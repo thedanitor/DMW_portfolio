@@ -53,7 +53,7 @@ const aqirProject = new ProjectData(
   "AQIR is a mock retail website that allows users to buy and sell products from the comfort of their home. Just sign up, login, and add or sell products with a community of users from around the world.",
   "https://thawing-castle-93200.herokuapp.com/",
   "https://github.com/ngoudeau2012/project_aqir",
-  "500ms",
+  "100ms",
 );
 
 const burgerProject = new ProjectData(
@@ -64,7 +64,7 @@ const burgerProject = new ProjectData(
   "This website allows the user to enter a burger and virtually eat it.",
   "https://dansburgers.herokuapp.com/",
   "https://github.com/thedanitor/burger",
-  "1000ms",
+  "200ms",
 );
 
 const employeeRosterProject = new ProjectData(
@@ -75,7 +75,7 @@ const employeeRosterProject = new ProjectData(
   "Once installed, this command line application prompts the user with questions to build an employee roster. The roster is then rendered to an HTML page.",
   "",
   "https://github.com/thedanitor/Employee_Roster",
-  "1500ms",
+  "300ms",
 );
 
 const fearSetterProject = new ProjectData(
@@ -86,7 +86,7 @@ const fearSetterProject = new ProjectData(
   "This app was created to help the user to conquer their fears. User can keep track of fears and is incentivised to overcome them.",
   "https://thedanitor.github.io/Project-1_Fear-Setter/",
   "https://github.com/thedanitor/Project-1_Fear-Setter",
-  "2000ms",
+  "400ms",
 );
 
 const weatherProject = new ProjectData(
@@ -97,7 +97,7 @@ const weatherProject = new ProjectData(
   "Search for current weather conditions and forecast for the next 5 days in any city.",
   "https://thedanitor.github.io/Weather_Dashboard/",
   "https://github.com/thedanitor/Weather_Dashboard",
-  "2500ms",
+  "500ms",
 );
 
 const dayPlannerProject = new ProjectData(
@@ -108,7 +108,7 @@ const dayPlannerProject = new ProjectData(
   "Simple workday planner app. Save meetings to local storage.",
   "https://thedanitor.github.io/Work_Day_Scheduler/",
   "https://github.com/thedanitor/Work_Day_Scheduler",
-  "3000ms",
+  "600ms",
 
 );
 

@@ -20,7 +20,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Zoom ref={ref} {...props} />;
 });
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: 500,
     maxHeight: 500,
@@ -52,8 +52,16 @@ const useStyles = makeStyles({
     // minWidth: 600,
     // backgroundColor: "rgba(0, 0, 0, 0)",
     border: "3px solid black",
+    [theme.breakpoints.between(0, 300)]: {
+      padding: 1,
+    },
   },
-});
+  dialogContent: {
+    [theme.breakpoints.between(0, 300)]: {
+      padding: 1,
+    },
+  },
+}));
 
 export default function Project({
   name,
@@ -144,7 +152,7 @@ export default function Project({
              color="primary"
             >{name}</Typography>
           </DialogTitle> */}
-          <DialogContent>
+          <DialogContent className={classes.dialogContent}>
             <ProjectModal
               name={name}
               imageLarge={imageLarge}

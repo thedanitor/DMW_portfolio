@@ -1,6 +1,5 @@
-import React
-// , { useEffect, useState }
- from "react";
+import React from // , { useEffect, useState }
+"react";
 import Container from "@material-ui/core/Container";
 import Project from "../components/Project";
 import portfolioList from "../utils/portfolioList";
@@ -11,44 +10,68 @@ import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 // import Button from "@material-ui/core/Button";
-import BackgroundProjects from "../assets/images/LakeMargaret_topCenter1920.jpg";
+import BackgroundProjectsXl from "../assets/images/LakeMargaret_topCenterFull.jpg";
+import BackgroundProjectsLg from "../assets/images/LakeMargaret_topCenter1920.jpg";
+import BackgroundProjectsMd from "../assets/images/LakeMargaret_topCenter1280.jpg";
+import BackgroundProjectsSm from "../assets/images/LakeMargaret_topCenter960.jpg";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
     paddingTop: 100,
-    paddingBottom: 200,
-    justifyContent: "center"
+    paddingBottom: 100,
+    justifyContent: "center",
+    [theme.breakpoints.between(0, "xs")]: {
+      paddingTop: 35,
+      paddingBottom: 75,
+    },
   },
-  clearPaper: {
+  clearPaperTitle: {
+    backgroundColor: "rgba(0, 0, 0, 0)",
+    boxShadow: "none",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  clearPaperProjects: {
     backgroundColor: "rgba(0, 0, 0, 0)",
     boxShadow: "none",
   },
+  projectGrid: {
+    maxWidth: 500,
+  },
+  titleText: {
+    fontWeight: "bold",
+    [theme.breakpoints.down(260)]: {
+      fontSize: "2rem",
+    },
+  },
   backgroundProjects: {
-    backgroundImage: `url(${BackgroundProjects})`,
+    backgroundImage: `url(${BackgroundProjectsLg})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
+    // backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
-    
-    // minWidth: 1024,
     width: "100%",
     height: "100%",
-    // minHeight: 1000,
-    position: "fixed",
-    // top: 0,
-    // left: 0,
-    // marginBottom: 0,
-    // marginRight: 0,
-    // marginLeft: 0,
-    // minHeight: 937,
-},
-});
+    minHeight: "100vh",
+    [theme.breakpoints.up("xl")]: {
+      backgroundImage: `url(${BackgroundProjectsXl})`,
+    },
+    [theme.breakpoints.between("sm", "xl")]: {
+      backgroundImage: `url(${BackgroundProjectsLg})`,
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      backgroundImage: `url(${BackgroundProjectsMd})`,
+    },
+    [theme.breakpoints.down(400)]: {
+      backgroundImage: `url(${BackgroundProjectsSm})`,
+    },
+  },
+}));
 
 export default function Projects() {
-
   const classes = useStyles();
 
   // const [hover, setHover] = useState(false);
@@ -72,39 +95,59 @@ export default function Projects() {
   //       transition: "0.5s",
   //       // transform: "scale(0.5)",
   //     })
-  //   : (hoverStyle = { 
+  //   : (hoverStyle = {
   //     opacity: 1,
-  //     // color: "FF0000" 
+  //     // color: "FF0000"
   //   });
 
-
-
-
-    return (
-      <Slide
+  return (
+    <Slide
       direction="left"
       in="true"
       // style={{ transitionDelay: "500ms" }}
-      timeout={750}
+      timeout={500}
     >
       <div className={classes.backgroundProjects}>
         <Container id="projects" className={classes.root}>
-        <Typography
+          {/* <Typography
+            className={classes.titleText}
             gutterBottom
             variant="h2"
             component="h2"
-            className="project-title"
-            color="primary"
+            // className="project-title"
+            color="secondary"
           >
             Projects
-          </Typography>
-            <Grid container justify={"center"} spacing={5}>
+          </Typography> */}
+          <Grid container justify="center">
+            <Grid item sm={6} lg={4}>
+              <Slide
+                direction="down"
+                in="true"
+                // style={{ transitionDelay: "500ms" }}
+                timeout={500}
+              >
+                <Paper className={classes.clearPaperTitle}>
+                  <Typography
+                    className={classes.titleText}
+                    variant="h2"
+                    color="secondary"
+                  >
+                    Projects
+                  </Typography>
+                </Paper>
+              </Slide>
+            </Grid>
+          </Grid>
+          <Grid container justify={"center"} spacing={5}>
             {portfolioList.map((proj, index) => (
-                <Grid item md={6} lg={4} key={index}>
-                  <Slide direction="up" in="true" style={{ transitionDelay:  proj.transition  }}>
-                    <Paper
-                    className={classes.clearPaper}
-                    >
+              <Grid item md={6} lg={4} key={index} className={classes.projectGrid}>
+                <Slide
+                  direction="up"
+                  in="true"
+                  style={{ transitionDelay: proj.transition }}
+                >
+                  <Paper className={classes.clearPaperProjects}>
                     <Project
                       name={proj.name}
                       image={proj.image}
@@ -116,13 +159,13 @@ export default function Projects() {
                       transition={proj.transition}
                       key={index}
                     />
-                    </Paper>
-                  </Slide>
-                </Grid>
-              ))}
-            </Grid>
-      </Container>
+                  </Paper>
+                </Slide>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </div>
-      </Slide>
-    )
+    </Slide>
+  );
 }
