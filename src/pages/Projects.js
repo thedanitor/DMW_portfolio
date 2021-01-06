@@ -129,7 +129,7 @@ export default function Projects() {
               </Slide>
             </Grid>
           </Grid>
-          <Grid container justify={"center"} spacing={5}>
+          <Grid container justify={"center"} spacing={4}>
             {portfolioList.map((proj, index) => (
               <Grid item md={6} lg={4} key={index} className={classes.projectGrid}>
                 <Slide

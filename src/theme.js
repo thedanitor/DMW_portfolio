@@ -16,6 +16,12 @@ export default createMuiTheme({
         background: "rgba(97,158,215,0.95)",
       },
     },
+    // MuiToolbar: {
+    //   gutters: {
+    //     paddingLeft: 0, 
+    //     paddingRight: 0,
+    //   }
+    // },
     MuiMenu: {
       list: {
         padding: 0,

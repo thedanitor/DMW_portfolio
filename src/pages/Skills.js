@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexWrap: "wrap",
     margin: "auto",
+    // width: "100%",
     paddingTop: 100,
     paddingBottom: 100,
     [theme.breakpoints.between(0, "xs")]: {
@@ -119,7 +120,7 @@ export default function Skills() {
           >
             Technical Skills
           </Typography> */}
-          <Grid container justify={"center"} spacing={5}>
+          <Grid container justify={"center"} spacing={4}>
             <Grid item sm={6} md={4}>
               <Slide
                 direction="up"
