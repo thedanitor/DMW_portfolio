@@ -9,7 +9,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
-// import Typography from "@material-ui/core/Typography";
+import Typography from "@material-ui/core/Typography";
 // import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
@@ -101,7 +101,6 @@ const useStyles = makeStyles(theme => ({
   },
   sectionMobile: {
     display: "flex",
-
     [theme.breakpoints.up("sm")]: {
       display: "none",
       justify: "space-between",
@@ -130,6 +129,23 @@ const useStyles = makeStyles(theme => ({
   navButtonDesktop: {
     fontWeight: "bold",
   },
+  contactListItem: {
+    margin: "1rem",
+    [theme.breakpoints.down(300)]: {
+      margin: "0.75rem",
+    },
+  },
+  contactListItemText: {
+    [theme.breakpoints.down(300)]: {
+      fontSize: "0.75rem",
+    },
+  },
+  contactListIconLink: {
+    [theme.breakpoints.down(300)]: {
+      fontSize: "1.5rem",
+    },
+  },
+
 }));
 
 export default function PersistentDrawerLeft() {
@@ -331,17 +347,19 @@ export default function PersistentDrawerLeft() {
                 href={infoItem.href}
                 target={infoItem.target}
                 rel="noopener noreferrer"
+                className={classes.contactListItem}
               >
                 <FontAwesomeIcon
                   icon={infoItem.icon}
                   aria-label={infoItem.ariaLabel}
-                  size="3x"
-                  className={classes.iconLink}
+                  size="2x"
+                  className={classes.contactListIconLink}
                   color={infoItem.color}
                 />
               </a>
-
-              {infoItem.pLabel}
+              <Typography variant="body1" color="primary" className={classes.contactListItemText}>
+                {infoItem.pLabel}
+              </Typography>
             </ListItem>
           ))}
         </List>
