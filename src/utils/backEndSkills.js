@@ -6,7 +6,8 @@ const backEndSkills = [
     "MongoDB",
     "Mongoose",
     "IndexedDB",
-    // "Handlebars",
+    "Handlebars",
+    "APIs",
 ];
 
 export default backEndSkills;

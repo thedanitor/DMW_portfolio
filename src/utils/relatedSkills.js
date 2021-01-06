@@ -6,6 +6,8 @@ const relatedSkills = [
     "VS Code",
     "Process Validation",
     "Testing",
+    "Responsive Design",
+    "PWAs",
 ];
 
 export default relatedSkills;

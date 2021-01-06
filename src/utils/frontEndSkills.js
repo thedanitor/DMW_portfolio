@@ -6,8 +6,8 @@ const frontEndSkills = [
     "React",
     "BootStrap",
     "UIKit",
-    // "Bulma",
-    // "Material-UI",
+    "Bulma",
+    "Material-UI",
 ];
 
 export default frontEndSkills;
