@@ -14,7 +14,10 @@ import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
-import BackgroundSkills from "../assets/images/LakeMargaret_topLeft1920.jpg";
+import BackgroundSkillsXl from "../assets/images/LakeMargaret_topLeftFull.jpg";
+import BackgroundSkillsLg from "../assets/images/LakeMargaret_topLeft1920.jpg";
+import BackgroundSkillsMd from "../assets/images/LakeMargaret_topLeft1280.jpg";
+import BackgroundSkillsSm from "../assets/images/LakeMargaret_topLeft960.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -68,7 +71,6 @@ const useStyles = makeStyles(theme => ({
     },
   },
   backgroundSkills: {
-    backgroundImage: `url(${BackgroundSkills})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
@@ -77,6 +79,18 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
     minHeight: "100vh",
+    [theme.breakpoints.up("xl")]: {
+      backgroundImage: `url(${BackgroundSkillsXl})`,
+    },
+    [theme.breakpoints.between("sm", "xl")]: {
+      backgroundImage: `url(${BackgroundSkillsLg})`,
+    },
+    [theme.breakpoints.between("xs", "sm")]: {
+      backgroundImage: `url(${BackgroundSkillsMd})`,
+    },
+    [theme.breakpoints.down(400)]: {
+      backgroundImage: `url(${BackgroundSkillsSm})`,
+    },
   },
 }));
 
@@ -111,15 +125,6 @@ export default function Skills() {
               </Slide>
             </Grid>
           </Grid>
-          {/* <Typography
-            gutterBottom
-            variant="h2"
-            component="h2"
-            className={classes.titleText}
-            color="secondary"
-          >
-            Technical Skills
-          </Typography> */}
           <Grid container justify={"center"} spacing={4}>
             <Grid item sm={6} md={4}>
               <Slide

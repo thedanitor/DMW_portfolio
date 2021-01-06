@@ -47,7 +47,6 @@ const useStyles = makeStyles(theme => ({
     },
   },
   backgroundProjects: {
-    backgroundImage: `url(${BackgroundProjectsLg})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
