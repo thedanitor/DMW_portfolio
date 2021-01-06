@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/archivo-black": "^4.1.0",
+    "@fontsource/gothic-a1": "^4.1.0",
     "@fontsource/quantico": "^4.0.1",
+    "@fontsource/space-mono": "^4.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",

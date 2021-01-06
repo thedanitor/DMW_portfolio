@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 500,
   },
   titleText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     [theme.breakpoints.down(260)]: {
       fontSize: "2rem",
     },

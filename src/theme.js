@@ -1,14 +1,17 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import "@fontsource/quantico";
+import "@fontsource/space-mono";
+import "@fontsource/archivo-black";
+import "@fontsource/gothic-a1";
 
 export default createMuiTheme({
   overrides: {
     MuiMenuItem: {
       root: {
         background: "rgba(97,158,215,0.95)",
-        "&$focused": {
-          background: "rgb(54, 137, 214)",
-        },
+        // "&$focused": {
+        //   background: "rgb(54, 137, 214)",
+        // },
       },
     },
     MuiMenuPaper: {
@@ -40,7 +43,12 @@ export default createMuiTheme({
     },
   },
   typography: {
-    fontFamily: ["Quantico"],
+    fontFamily: [
+      "Gothic A1",
+      "Archivo Black",
+      // "Space Mono",
+    ]
+    .join(','),
   },
 });
 

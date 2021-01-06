@@ -50,13 +50,13 @@ const useStyles = makeStyles(theme => ({
     },
   },
   nameText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     [theme.breakpoints.down(220)]: {
       fontSize: "2rem",
     },
   },
   stackText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     [theme.breakpoints.between(220, 300)]: {
       fontSize: "1.5rem",
     },
@@ -87,12 +87,12 @@ export default function Home() {
   return (
     <Fade
       in="true"
-      // timeout={5000}
+      timeout={500}
     >
       <div className={classes.backgroundHome}>
         <Container id="about" className={classes.root}>
           <Grid container justify="center">
-            <Grid item sm={6} lg={4}>
+            <Grid item sm={6}>
               <Slide
                 direction="down"
                 in="true"
@@ -105,20 +105,20 @@ export default function Home() {
                     variant="h2"
                     color="secondary"
                   >
-                    Dan Weikart
+                    DAN WEIKART
                   </Typography>
                 </Paper>
               </Slide>
             </Grid>
           </Grid>
           <Grid container justify="center" spacing={3}>
-            <Grid item xs={0} sm={4}></Grid>
+            <Grid item xs={1} sm={4}></Grid>
             <Grid item xs={9} sm={4}>
               <Slide
                 direction="right"
                 in="true"
                 style={{ transitionDelay: "1000ms" }}
-                // timeout={1250}
+                // timeout={1000}
               >
                 <Card className={classes.photo}>
                   <CardMedia
@@ -133,7 +133,7 @@ export default function Home() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "1500ms" }}
+                style={{ transitionDelay: "1200ms" }}
               >
                 <Paper className={classes.clearPaperStack}>
                   <Typography
@@ -148,7 +148,7 @@ export default function Home() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "2000ms" }}
+                style={{ transitionDelay: "1400ms" }}
               >
                 <Paper className={classes.clearPaperStack}>
                   <Typography
@@ -163,7 +163,7 @@ export default function Home() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "2500ms" }}
+                style={{ transitionDelay: "1600ms" }}
               >
                 <Paper className={classes.clearPaperStack}>
                   <Typography
@@ -178,7 +178,7 @@ export default function Home() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "3000ms" }}
+                style={{ transitionDelay: "1800ms" }}
               >
                 <Paper className={classes.clearPaperStack}>
                   <Typography

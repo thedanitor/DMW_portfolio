@@ -58,13 +58,13 @@ const useStyles = makeStyles(theme => ({
     
   },
   titleText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     [theme.breakpoints.down(300)]: {
       fontSize: "2rem",
     },
   },
   headingText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     padding: "12px 10px 0px 10px",
     [theme.breakpoints.down(300)]: {
       fontSize: "1.5rem",

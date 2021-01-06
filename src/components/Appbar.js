@@ -127,7 +127,7 @@ const useStyles = makeStyles(theme => ({
     // height: "100%",
   },
   navButtonDesktop: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
   },
   contactListItem: {
     margin: "1rem",
@@ -136,6 +136,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   contactListItemText: {
+    fontFamily: "Archivo Black",
     [theme.breakpoints.down(300)]: {
       fontSize: "0.75rem",
     },

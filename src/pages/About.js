@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 20,
   },
   titleText: {
-    fontWeight: "bold",
+    fontFamily: "Archivo Black",
     [theme.breakpoints.down(250)]: {
       fontSize: "2rem",
     },
