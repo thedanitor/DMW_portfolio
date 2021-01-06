@@ -109,16 +109,6 @@ export default function Projects() {
     >
       <div className={classes.backgroundProjects}>
         <Container id="projects" className={classes.root}>
-          {/* <Typography
-            className={classes.titleText}
-            gutterBottom
-            variant="h2"
-            component="h2"
-            // className="project-title"
-            color="secondary"
-          >
-            Projects
-          </Typography> */}
           <Grid container justify="center">
             <Grid item sm={6} lg={4}>
               <Slide

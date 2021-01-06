@@ -7,14 +7,18 @@ import Typography from "@material-ui/core/Typography";
 import ListItem from '@material-ui/core/ListItem';
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     boldFont: {
       // fontWeight: "bold",
+      [theme.breakpoints.down(300)]: {
+        fontSize: "1rem",
+      },
     },
     centerListItems: {
       justifyContent: "center",
+      padding: 0,
     },
-  });
+  }));
 
 export default function Skill({
     skill
@@ -22,7 +26,7 @@ export default function Skill({
     const classes = useStyles();
     return (
     <ListItem className={classes.centerListItems}>
-        <Typography variant="h5" color="secondary" className={classes.boldFont}>
+        <Typography variant="h5" color="primary" className={classes.boldFont}>
         {skill}
         </Typography>
     </ListItem>
