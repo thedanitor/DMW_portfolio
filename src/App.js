@@ -31,9 +31,9 @@ export default function App() {
       <Appbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/DMW_portfolio/about" component={About} />
-          <Route exact path="/DMW_portfolio/projects" component={Projects} />
-          <Route exact path="/DMW_portfolio/skills" component={Skills} />
+          <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+          <Route path={`${process.env.PUBLIC_URL}/projects`} component={Projects} />
+          <Route path={`${process.env.PUBLIC_URL}/skills`} component={Skills} />
         </Switch>
         <Footer />
         </ThemeProvider>
