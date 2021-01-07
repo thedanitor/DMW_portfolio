@@ -29,12 +29,18 @@ export default function App() {
    <Router basename="/DMW_portfolio">
       <ThemeProvider theme={createMuiTheme}>
       <Appbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
-          <Route path={`${process.env.PUBLIC_URL}/projects`} component={Projects} />
-          <Route path={`${process.env.PUBLIC_URL}/skills`} component={Skills} />
-        </Switch>
+          <Route exact path="/">
+          <Home />
+          </Route>
+          <Route path="/about">
+          <About />
+          </Route>
+          <Route path="/projects">
+          <Projects />
+          </Route>
+          <Route path="/skills">
+          <Skills />
+          </Route>
         <Footer />
         </ThemeProvider>
     </Router>
