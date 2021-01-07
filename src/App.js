@@ -1,6 +1,6 @@
-import './App.css';
+import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -9,41 +9,39 @@ import Appbar from "./components/Appbar";
 import Footer from "./components/Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import createMuiTheme from "./theme";
-import { ThemeProvider, 
-} from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   backgroundApp: {
-      backgroundSize: "cover",
-      backgroundAttachment: "fixed",
-      backgroundColor: "rgb(97,158,215)",
-      height: "100%",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundColor: "rgb(97,158,215)",
+    height: "100%",
   },
 });
-
 
 export default function App() {
   const classes = useStyles();
   return (
     <div className={classes.backgroundApp}>
-   <Router basename="/DMW_portfolio">
-      <ThemeProvider theme={createMuiTheme}>
-      <Appbar />
+      <Router basename="/DMW_portfolio">
+        <ThemeProvider theme={createMuiTheme}>
+          <Appbar />
           <Route exact path="/">
-          <Home />
+            <Home />
           </Route>
           <Route path="/about">
-          <About />
+            <About />
           </Route>
           <Route path="/projects">
-          <Projects />
+            <Projects />
           </Route>
           <Route path="/skills">
-          <Skills />
+            <Skills />
           </Route>
-        <Footer />
+          <Footer />
         </ThemeProvider>
-    </Router>
+      </Router>
     </div>
   );
 }
