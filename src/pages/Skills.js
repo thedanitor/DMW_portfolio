@@ -155,7 +155,7 @@ export default function Skills() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "1000ms" }}
+                style={{ transitionDelay: "600ms" }}
               >
                 <Paper className={classes.paper}>
                 <Typography
@@ -179,7 +179,7 @@ export default function Skills() {
               <Slide
                 direction="up"
                 in="true"
-                style={{ transitionDelay: "1500ms" }}
+                style={{ transitionDelay: "700ms" }}
               >
                 <Paper className={classes.paper}>
                 <Typography
