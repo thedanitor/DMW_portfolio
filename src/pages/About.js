@@ -56,7 +56,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    // backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
     width: "100%",
     height: "100%",
@@ -83,7 +82,6 @@ export default function About() {
     <Slide
       direction="left"
       in="true"
-      // style={{ transitionDelay: "500ms" }}
       timeout={750}
     >
       <div className={classes.backgroundAbout}>
@@ -131,10 +129,6 @@ export default function About() {
                 <Typography variant="h6" color="primary" className={classes.aboutText}>
                   When I am not coding I am hopefully biking, hiking, camping,
                   reading, or playing music.
-                  {/* My hobbies include hiking, camping, biking, reading, cooking,
-            listening to and playing music. Causes I am dedicated to are social
-            justice, sustainability, and climate change. It would be my dream to
-            incorporate any of these passions into my work. */}
                 </Typography>
               </Paper>
             </Slide>

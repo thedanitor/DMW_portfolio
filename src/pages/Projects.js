@@ -1,15 +1,12 @@
-import React from // , { useEffect, useState }
-"react";
+import React from "react";
 import Container from "@material-ui/core/Container";
 import Project from "../components/Project";
 import portfolioList from "../utils/portfolioList";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
-// import ArrowButtons from "../../components/ArrowButtons";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-// import Button from "@material-ui/core/Button";
 import BackgroundProjectsXl from "../assets/images/LakeMargaret_topCenterFull.jpg";
 import BackgroundProjectsLg from "../assets/images/LakeMargaret_topCenter1920.jpg";
 import BackgroundProjectsMd from "../assets/images/LakeMargaret_topCenter1280.jpg";
@@ -50,7 +47,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    // backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
     width: "100%",
     height: "100%",
@@ -73,37 +69,10 @@ const useStyles = makeStyles(theme => ({
 export default function Projects() {
   const classes = useStyles();
 
-  // const [hover, setHover] = useState(false);
-
-  // const hoverOn = () => {
-  //   setHover(true);
-  // };
-
-  // const hoverOff = () => {
-  //   setHover(false);
-  // };
-
-  // let hoverStyle;
-  // hover
-  //   ? (hoverStyle = {
-  //     opacity: 0.5,
-  //       // color: "#00FF00",
-  //       // backgroundColor: "white",
-  //       // boxShadow: "0 0 20px #00FF00",
-  //       // texShadow: "0 0 5px #00FF00",
-  //       transition: "0.5s",
-  //       // transform: "scale(0.5)",
-  //     })
-  //   : (hoverStyle = {
-  //     opacity: 1,
-  //     // color: "FF0000"
-  //   });
-
   return (
     <Slide
       direction="left"
       in="true"
-      // style={{ transitionDelay: "500ms" }}
       timeout={500}
     >
       <div className={classes.backgroundProjects}>
@@ -113,7 +82,6 @@ export default function Projects() {
               <Slide
                 direction="down"
                 in="true"
-                // style={{ transitionDelay: "500ms" }}
                 timeout={500}
               >
                 <Paper className={classes.clearPaperTitle}>

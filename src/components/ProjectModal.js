@@ -9,7 +9,6 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // color: "#000",
     backgroundColor: "rgba(97,158,215,0.95)",
     border: "3px solid black",
     [theme.breakpoints.down(275)]: {
@@ -72,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.between(0, 175)]: {
       fontSize: "0.5rem",
     },
-  }
+  },
 }));
 
 export default function ProjectModal({
@@ -82,8 +81,7 @@ export default function ProjectModal({
   description,
   webUrl,
   githubUrl,
-    handleClose,
-  //   show,
+  handleClose,
 }) {
   const classes = useStyles();
 
@@ -91,16 +89,33 @@ export default function ProjectModal({
     <Card className={classes.root}>
       <CardMedia className={classes.media} image={imageLarge} title={name} />
       <CardContent align={"center"} className={classes.cardContent}>
-        <Typography gutterBottom variant="h4" color="secondary" className={classes.titleText}>
+        <Typography
+          gutterBottom
+          variant="h4"
+          color="secondary"
+          className={classes.titleText}
+        >
           {name}
         </Typography>
-        <Typography variant="body2" color="primary"className={classes.descriptionText}>
+        <Typography
+          variant="body2"
+          color="primary"
+          className={classes.descriptionText}
+        >
           {description}
         </Typography>
-        <Typography variant="h6" color="secondary" className={classes.technologiesText}>
+        <Typography
+          variant="h6"
+          color="secondary"
+          className={classes.technologiesText}
+        >
           Technologies Used:
         </Typography>
-        <Typography variant="body2" color="primary"className={classes.techText}>
+        <Typography
+          variant="body2"
+          color="primary"
+          className={classes.techText}
+        >
           {tech}
         </Typography>
       </CardContent>

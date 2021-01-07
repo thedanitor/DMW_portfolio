@@ -10,18 +10,14 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import Typography from "@material-ui/core/Typography";
-// import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
-// import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-// import MoreIcon from "@material-ui/icons/MoreVert";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
 const drawerWidth = 300;
@@ -38,8 +34,6 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   appBarShift: {
-    // width: `calc(100% - ${drawerWidth}px)`,
-    // marginRight: drawerWidth,
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -52,11 +46,9 @@ const useStyles = makeStyles(theme => ({
     display: "none",
   },
   drawer: {
-    // width: drawerWidth,
     flexShrink: 0,
   },
   drawerPaper: {
-    // width: drawerWidth,
     backgroundColor: "rgba(97,158,215,0.95)",
   },
   drawerHeader: {
@@ -107,24 +99,18 @@ const useStyles = makeStyles(theme => ({
     },
   },
   mobileMenu: {
-    // backgroundColor: "rgba(97,158,215,0.7)",
     color: "rgba(97,158,215,0.95)",
     margin: 0,
     padding: 0,
   },
   navMenuItemMobile: {
     margin: 0,
-    // "& .Mui-focused": {
-    //   background: "rgb(54, 137, 214)",
-    // },
-    // backgroundColor: "rgba(97,158,215,0.7)",
   },
   navIconMobile: {
     margin: "1rem",
   },
   navButtonMobile: {
     margin: 0,
-    // height: "100%",
   },
   navButtonDesktop: {
     fontFamily: "Archivo Black",
@@ -146,7 +132,6 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1.5rem",
     },
   },
-
 }));
 
 export default function PersistentDrawerLeft() {
@@ -204,9 +189,7 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar
-        // alignItems="center"
-        >
+        <Toolbar>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Button
@@ -248,15 +231,6 @@ export default function PersistentDrawerLeft() {
             </Button>
           </div>
           <div className={classes.sectionMobile}>
-            {/* <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="primary"
-            >
-              <MoreIcon />
-            </IconButton> */}
             <Button
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -294,13 +268,6 @@ export default function PersistentDrawerLeft() {
             className={classes.navMenuItemMobile}
           >
             <Button className={classes.navButtonMobile}>
-              {/* <FontAwesomeIcon
-                  icon={menuItem.icon}
-                  aria-label={menuItem.ariaLabel}
-                  // size="3x"
-                  className={classes.navIconMobile}
-                  
-                /> */}
               {menuItem.pLabel}
             </Button>
           </MenuItem>
@@ -310,13 +277,6 @@ export default function PersistentDrawerLeft() {
             onClick={handleDrawerOpen}
             className={classes.navButtonMobile}
           >
-            {/* <FontAwesomeIcon
-                  icon={faPhoneSquare}
-                  aria-label="contact"
-                  // size="3x"
-                  className={classes.navIconMobile}
-                  
-                /> */}
             Contact
           </Button>
         </MenuItem>
@@ -358,7 +318,11 @@ export default function PersistentDrawerLeft() {
                   color={infoItem.color}
                 />
               </a>
-              <Typography variant="body1" color="primary" className={classes.contactListItemText}>
+              <Typography
+                variant="body1"
+                color="primary"
+                className={classes.contactListItemText}
+              >
                 {infoItem.pLabel}
               </Typography>
             </ListItem>

@@ -13,7 +13,6 @@ import BackgroundHomeXl from "../assets/images/LakeMargaret_topWideFull.jpg";
 import BackgroundHomeLg from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
 import BackgroundHomeMd from "../assets/images/LakeMargaret_top1280.jpg";
 import BackgroundHomeSm from "../assets/images/LakeMargaret_top960.jpg";
-// import BackgroundHomeXs from "../assets/images/LakeMargaret_top600.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,7 +30,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    // backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
     width: "100%",
     height: "100%",
@@ -96,7 +94,6 @@ export default function Home() {
               <Slide
                 direction="down"
                 in="true"
-                // style={{ transitionDelay: "500ms" }}
                 timeout={500}
               >
                 <Paper className={classes.clearPaperName}>
@@ -118,7 +115,6 @@ export default function Home() {
                 direction="right"
                 in="true"
                 style={{ transitionDelay: "1000ms" }}
-                // timeout={1000}
               >
                 <Card className={classes.photo}>
                   <CardMedia

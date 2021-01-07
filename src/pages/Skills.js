@@ -3,16 +3,13 @@ import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
-// import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-// import skills from "../utils/skillList";
 import frontEndSkills from "../utils/frontEndSkills";
 import backEndSkills from "../utils/backEndSkills";
 import relatedSkills from "../utils/relatedSkills";
 import Skill from "../components/Skill";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
-// import ListItem from "@material-ui/core/ListItem";
 import Divider from "@material-ui/core/Divider";
 import BackgroundSkillsXl from "../assets/images/LakeMargaret_topLeftFull.jpg";
 import BackgroundSkillsLg from "../assets/images/LakeMargaret_topLeft1920.jpg";
@@ -24,7 +21,6 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexWrap: "wrap",
     margin: "auto",
-    // width: "100%",
     paddingTop: 100,
     paddingBottom: 100,
     [theme.breakpoints.between(0, "xs")]: {
@@ -53,9 +49,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
   },
   divider: {
-    // width: "80%",
-    // margin: "auto",
-    
+
   },
   titleText: {
     fontFamily: "Archivo Black",
@@ -74,7 +68,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
-    // backgroundAttachment: "fixed",
     backgroundColor: "rgb(97,158,215)",
     width: "100%",
     height: "100%",
@@ -100,7 +93,6 @@ export default function Skills() {
     <Slide
       direction="left"
       in="true"
-      // style={{ transitionDelay: "500ms" }}
       timeout={750}
     >
       <div className={classes.backgroundSkills}>
@@ -110,7 +102,6 @@ export default function Skills() {
               <Slide
                 direction="down"
                 in="true"
-                // style={{ transitionDelay: "500ms" }}
                 timeout={500}
               >
                 <Paper className={classes.clearPaperTitle}>
