@@ -7,10 +7,13 @@ import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import BackgroundProjectsXl from "../assets/images/LakeMargaret_topCenterFull.jpg";
-import BackgroundProjectsLg from "../assets/images/LakeMargaret_topCenter1920.jpg";
-import BackgroundProjectsMd from "../assets/images/LakeMargaret_topCenter1280.jpg";
-import BackgroundProjectsSm from "../assets/images/LakeMargaret_topCenter960.jpg";
+// import BackgroundProjectsXl from "../assets/images/LakeMargaret_topCenterFull.jpg";
+// import BackgroundProjectsLg from "../assets/images/LakeMargaret_topCenter1920.jpg";
+// import BackgroundProjectsMd from "../assets/images/LakeMargaret_topCenter1280.jpg";
+// import BackgroundProjectsSm from "../assets/images/LakeMargaret_topCenter960.jpg";
+import backgroundLg from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_Large_comp.jpg";
+import background from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_1920_comp.jpg";
+import backgroundSm from "../assets/images/Ruby_Beach_Olympic_National_Park_mobile_comp.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,18 +54,18 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
     minHeight: "100vh",
-    [theme.breakpoints.up("xl")]: {
-      backgroundImage: `url(${BackgroundProjectsXl})`,
+    [theme.breakpoints.up(1260)]: {
+      backgroundImage: `url(${backgroundLg})`,
     },
-    [theme.breakpoints.between("sm", "xl")]: {
-      backgroundImage: `url(${BackgroundProjectsLg})`,
+    [theme.breakpoints.between(600, 1260)]: {
+      backgroundImage: `url(${background})`,
     },
-    [theme.breakpoints.between("xs", "sm")]: {
-      backgroundImage: `url(${BackgroundProjectsMd})`,
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: `url(${backgroundSm})`,
     },
-    [theme.breakpoints.down(400)]: {
-      backgroundImage: `url(${BackgroundProjectsSm})`,
-    },
+    // [theme.breakpoints.down(400)]: {
+    //   backgroundImage: `url(${backgroundSm})`,
+    // },
   },
 }));
 

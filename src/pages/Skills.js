@@ -11,10 +11,13 @@ import Skill from "../components/Skill";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
-import BackgroundSkillsXl from "../assets/images/LakeMargaret_topLeftFull.jpg";
-import BackgroundSkillsLg from "../assets/images/LakeMargaret_topLeft1920.jpg";
-import BackgroundSkillsMd from "../assets/images/LakeMargaret_topLeft1280.jpg";
-import BackgroundSkillsSm from "../assets/images/LakeMargaret_topLeft960.jpg";
+// import BackgroundSkillsXl from "../assets/images/LakeMargaret_topLeftFull.jpg";
+// import BackgroundSkillsLg from "../assets/images/LakeMargaret_topLeft1920.jpg";
+// import BackgroundSkillsMd from "../assets/images/LakeMargaret_topLeft1280.jpg";
+// import BackgroundSkillsSm from "../assets/images/LakeMargaret_topLeft960.jpg";
+import backgroundLg from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_Large_comp.jpg";
+import background from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_1920_comp.jpg";
+import backgroundSm from "../assets/images/Ruby_Beach_Olympic_National_Park_mobile_comp.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,18 +75,18 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
     minHeight: "100vh",
-    [theme.breakpoints.up("xl")]: {
-      backgroundImage: `url(${BackgroundSkillsXl})`,
+    [theme.breakpoints.up(1260)]: {
+      backgroundImage: `url(${backgroundLg})`,
     },
-    [theme.breakpoints.between("sm", "xl")]: {
-      backgroundImage: `url(${BackgroundSkillsLg})`,
+    [theme.breakpoints.between(600, 1260)]: {
+      backgroundImage: `url(${background})`,
     },
-    [theme.breakpoints.between("xs", "sm")]: {
-      backgroundImage: `url(${BackgroundSkillsMd})`,
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: `url(${backgroundSm})`,
     },
-    [theme.breakpoints.down(400)]: {
-      backgroundImage: `url(${BackgroundSkillsSm})`,
-    },
+    // [theme.breakpoints.down(400)]: {
+    //   backgroundImage: `url(${backgroundSm})`,
+    // },
   },
 }));
 

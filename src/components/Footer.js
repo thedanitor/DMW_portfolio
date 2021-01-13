@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: "rgba(119, 119, 119, 0.5)",
     [theme.breakpoints.up(300)]: {
-      marginTop: -61.5,
+      marginTop: -62.5,
     },
     [theme.breakpoints.between(0, 300)]: {
       display: "none",

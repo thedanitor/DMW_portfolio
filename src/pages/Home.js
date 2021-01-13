@@ -9,10 +9,14 @@ import Slide from "@material-ui/core/Slide";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import Fade from "@material-ui/core/Fade";
-import BackgroundHomeXl from "../assets/images/LakeMargaret_topWideFull.jpg";
-import BackgroundHomeLg from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
-import BackgroundHomeMd from "../assets/images/LakeMargaret_top1280.jpg";
-import BackgroundHomeSm from "../assets/images/LakeMargaret_top960.jpg";
+// import BackgroundHomeXl from "../assets/images/LakeMargaret_topWideFull.jpg";
+// import BackgroundHomeLg from "../assets/images/LakeMargaret_top1920x1080comp.jpg";
+// import BackgroundHomeMd from "../assets/images/LakeMargaret_top1280.jpg";
+// import BackgroundHomeSm from "../assets/images/LakeMargaret_top960.jpg";
+import backgroundLg from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_Large_comp.jpg";
+import background from "../assets/images/Ruby_Beach_Olympic_National_Park_16x9_1920_comp.jpg";
+import backgroundSm from "../assets/images/Ruby_Beach_Olympic_National_Park_mobile_comp.jpg";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,18 +38,18 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
     minHeight: "100vh",
-    [theme.breakpoints.up("xl")]: {
-      backgroundImage: `url(${BackgroundHomeXl})`,
+    [theme.breakpoints.up(1260)]: {
+      backgroundImage: `url(${backgroundLg})`,
     },
-    [theme.breakpoints.between("sm", "xl")]: {
-      backgroundImage: `url(${BackgroundHomeLg})`,
+    [theme.breakpoints.between(600, 1260)]: {
+      backgroundImage: `url(${background})`,
     },
-    [theme.breakpoints.between("xs", "sm")]: {
-      backgroundImage: `url(${BackgroundHomeMd})`,
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: `url(${backgroundSm})`,
     },
-    [theme.breakpoints.down(400)]: {
-      backgroundImage: `url(${BackgroundHomeSm})`,
-    },
+    // [theme.breakpoints.down(400)]: {
+    //   backgroundImage: `url(${backgroundSm})`,
+    // },
   },
   nameText: {
     fontFamily: "Archivo Black",
