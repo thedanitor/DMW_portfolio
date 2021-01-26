@@ -31,38 +31,40 @@ const useStyles = makeStyles(theme => ({
     },
   },
   backgroundHome: {
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-    backgroundRepeat: "no-repeat",
-    backgroundColor: "rgb(97,158,215)",
-    width: "100%",
-    height: "100%",
+    // backgroundSize: "cover",
+    // backgroundPosition: "center center",
+    // backgroundRepeat: "no-repeat",
+    // backgroundColor: "rgb(97,158,215)",
+    // width: "100%",
+    // height: "100%",
     minHeight: "100vh",
-    [theme.breakpoints.up(1260)]: {
-      backgroundImage: `url(${backgroundLg})`,
-    },
-    [theme.breakpoints.between(600, 1260)]: {
-      backgroundImage: `url(${background})`,
-    },
-    [theme.breakpoints.down("xs")]: {
-      backgroundImage: `url(${backgroundSm})`,
-    },
+    // [theme.breakpoints.up(1260)]: {
+    //   backgroundImage: `url(${backgroundLg})`,
+    // },
+    // [theme.breakpoints.between(600, 1260)]: {
+    //   backgroundImage: `url(${background})`,
+    // },
+    // [theme.breakpoints.down("xs")]: {
+    //   backgroundImage: `url(${backgroundSm})`,
+    // },
     // [theme.breakpoints.down(400)]: {
     //   backgroundImage: `url(${backgroundSm})`,
     // },
   },
+
+
   nameText: {
     fontFamily: "Archivo Black",
-    [theme.breakpoints.down(220)]: {
+    [theme.breakpoints.down(320)]: {
       fontSize: "2rem",
     },
   },
   stackText: {
     fontFamily: "Archivo Black",
-    [theme.breakpoints.between(220, 300)]: {
+    [theme.breakpoints.between(240, 320)]: {
       fontSize: "1.5rem",
     },
-    [theme.breakpoints.down(220)]: {
+    [theme.breakpoints.down(240)]: {
       fontSize: "1rem",
     },
   },
@@ -113,6 +115,7 @@ export default function Home() {
             </Grid>
           </Grid>
           <Grid container justify="center" spacing={3}>
+            <Grid container item xs={12} justify="center" spacing={3} >
             <Grid item xs={1} sm={4}></Grid>
             <Grid item xs={9} sm={4}>
               <Slide
@@ -190,6 +193,7 @@ export default function Home() {
                   </Typography>
                 </Paper>
               </Slide>
+            </Grid>
             </Grid>
           </Grid>
         </Container>
