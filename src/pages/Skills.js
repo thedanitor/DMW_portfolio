@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
   },
   titleText: {
     fontFamily: "Archivo Black",
-    [theme.breakpoints.down(300)]: {
+    [theme.breakpoints.down(350)]: {
       fontSize: "2rem",
     },
   },
