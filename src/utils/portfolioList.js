@@ -1,5 +1,5 @@
-// import lernImg from "../assets/images/lern_4-3.png";
-// import lernWide from "../assets/images/lern_wide.png";
+import lernImg from "../assets/images/lern_4-3.png";
+import lernWide from "../assets/images/lern_wide.png";
 import aqirImg from "../assets/images/aqir_home_screen_4-3.png";
 import aqirWide from "../assets/images/aqir_home_screen_wide.png";
 import burgerImg from "../assets/images/burger_4-3.png";
@@ -34,16 +34,16 @@ function ProjectData(
   this.transition = transition;
 }
 
-// const lernProject = new ProjectData(
-//   "LERN",
-//   lernImg,
-//   lernWide,
-//   "HTML / CSS / JavaScript / MongoDB / Node / Express / React / Material-UI",
-//   "LERN is an open source education platform for taking and teaching online courses.",
-//   "https://lern-demo.herokuapp.com/",
-//   "https://github.com/jaredhennessy/LERN",
-//   "0ms",
-// );
+const lernProject = new ProjectData(
+  "LERN",
+  lernImg,
+  lernWide,
+  "HTML / CSS / JavaScript / MongoDB / Node / Express / React / Material-UI",
+  "LERN is an open source education platform for taking and teaching online courses.",
+  "https://lern-demo.herokuapp.com/",
+  "https://github.com/jaredhennessy/LERN",
+  "0ms",
+);
 
 const aqirProject = new ProjectData(
   "AQIR",
@@ -113,7 +113,7 @@ const dayPlannerProject = new ProjectData(
 );
 
 let portfolioList = [
-  // lernProject,
+  lernProject,
   aqirProject,
   burgerProject,
   employeeRosterProject,
